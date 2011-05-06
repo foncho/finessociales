@@ -8,7 +8,7 @@ tmp/**/*
 coverage
 public/cache
 public/system
-public/stylesheets
+
 doc/specs.html
 doc/features.html
 tags

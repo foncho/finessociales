@@ -54,3 +54,4 @@ gem "pickle", "~> 0.4.2", :group => :test
 gem "launchy", :group => :test
 gem "hoptoad_notifier", "~> 2.3.6"
 gem "rails3-generators", :group => :development
+gem "heroku"
