@@ -1,0 +1,21 @@
+/* TEAM */
+  Web design, markup and stylesheets: Juanjo Andrés
+  Contact: juanjo.andres [at] aentos.com
+  Twitter: @juanjoandres
+
+  Developer: Judit Sarmiento
+  Contact: judit.sarmiento [at] aentos.com
+  Twitter: @juditsr
+
+  Developer: Ancor Cruz
+  Contact: ancor.cruz [at] aentos.com
+  Twitter: @ancorcruz
+
+  Developer: Alberto Perdomo
+  Contact: alberto.perdomo [at] aentos.com
+  Twitter: @albertoperdomo
+
+/* SITE */
+  Canonical URL: http://www.finessociales.es
+  Language: Español
+  Doctype: HTML5
