@@ -2,14 +2,14 @@
 %html
   %head
     %meta{ :charset => "utf-8" }/
-    -# 
+    -#
       Always force latest IE rendering engine (even in intranet) & Chrome Frame
       Remove this if you use the .htaccess
     %meta{ :content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible" }/
     %meta{ :content => "", :name => "description" }/
     %meta{ :content => "", :name => "author" }/
     %meta{ :content => "", :name => "keywords" }/
-    %meta{ :content => "", :name => "copyright" }/    
+    %meta{ :content => "", :name => "copyright" }/
     -# Mobile viewport optimized: j.mp/bplateviewport
     %meta{ :content => "width=device-width; initial-scale=1.0", :name => "viewport" }/
 
@@ -23,7 +23,7 @@
     /[if lt IE 8]
       = stylesheet_link_tag('ie', :media => 'screen, projection')
     -# For the less-enabled mobile browsers like Opera Mini
-    = stylesheet_link_tag('handheld', :media => 'handheld')    
+    = stylesheet_link_tag('handheld', :media => 'handheld')
     = csrf_meta_tag
   %body{ :class => "#{controller.controller_name}" }
     #container
@@ -36,8 +36,8 @@
               %p= value
         = yield
       #footer
-        %p.copyright
-          Copyright &copy; #{Date.today.year}
+        %p.info
+          = raw "#{link_to('finessociales.es', root_path)} es un proyecto opensource desarrollado para el #{link_to('Desafío Abredatos 2011', 'http://www.abredatos.es/', :target => '_blank')}. #{link_to('Código fuente', 'https://github.com/aentos/finessociales', :target => '_blank')}"
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" }
     = javascript_include_tag("rails")
