@@ -12,8 +12,6 @@ class Group < ActiveRecord::Base
     where("projects.organization_id == ? and projects.year_id == ?", organization.to_param, year.to_param).uniq
   }
 
-  scope :of_year, lambda {}
-
   def budget_for_organization_year(organization, year)
     total = 0.0
     projects.where(:year_id => year.to_param).of_organization(organization).each {|project| total += project.budget }

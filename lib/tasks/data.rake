@@ -43,4 +43,39 @@ namespace :data do
     end
   end
 
+  desc "Recalculate the budget information"
+  task :recalculate => :environment do
+    # The only budgets extract from the data are the projects budgets
+    Year.all.each do |year|
+      # Target budgets
+      Target.all.each do |target|
+        total = 0
+        target.projects.of_year(year).each do |project|
+          total += project.budget
+        end
+        TargetBudget.create(:target => target, :year => year, :budget => total)
+      end
+      # Group budgets
+      Group.all.each do |group|
+        total = 0
+        group.projects.of_year(year).each do |project|
+          total += project.budget
+        end
+        percentage = (total/year.social_budget)*100.0
+        GroupBudget.create(:group => group, :year => year, :budget => total, :percentage => percentage)
+      end
+      # Organization budgets
+      Organization.all.each do |organization|
+        total = 0
+        organization.projects.of_year(year).each do |project|
+          total += project.budget
+        end
+        OrganizationBudget.create(:organization => organization, :year => year, :budget => total)
+      end
+      # Year totals
+      year.update_attributes(:total_projects => Project.where(:year_id => year.to_param).count)
+      year.update_attributes(:total_organizations => Organization.of_year(year).count)
+    end
+  end
+
 end

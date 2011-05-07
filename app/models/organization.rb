@@ -8,6 +8,11 @@ class Organization < ActiveRecord::Base
   validates_presence_of :name, :cif
   validates_uniqueness_of :cif
 
+  scope :of_year, lambda { |year|
+    joins(:organization_budgets).
+    where("organization_budgets.year_id == ?", year.to_param).uniq
+  }
+
   def budget(year)
     organization_budgets.empty? ? 0.0 : organization_budgets.where(:year_id => year.to_param).first.budget
   end
