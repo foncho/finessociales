@@ -1,17 +1,20 @@
 #organization
   %span= resource.cif
   %span= resource.name
+  %span= "Total: #{resource.budget}"
 
   #groups
     %ul.groups
       - Group.attended_by_organization(resource).each do |group|
         %li
           %span= group.name
+          %span= group.budget_for_organization(resource)
           #targets
             %ul.targets
             - group.targets.each do |target|
               %li
                 %span= target.name
+                %span= target.budget_for_organization(resource)
                 #projects
                   %ul.projects
                   - target.projects.of_organization(resource).each do |project|
