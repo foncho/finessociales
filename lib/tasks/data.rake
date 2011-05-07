@@ -26,7 +26,7 @@ namespace :data do
 
         # new data set
         puts "Importando el año #{year_number}."
-        total_budget = ask("¿Cuál ha sido el importe total recaudado en millones a través del 0,7% de IRPF? (p.ej. 264.365.673,21 en 2011): ")
+        total_budget = ask("¿Cuál ha sido el importe total recaudado en millones a través del 0,7% de IRPF? (p.ej. 264365673.21 para 2010): ")
         social_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos sociales? (si fue 78,2% introduce 78.2): ")
         foreing_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos de cooperación en paises de desarrollo? (si fue 19,3% introduce 19.3): ")
         environmental_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos de medioambiente? (si fue 2,5% introduce 2.5): ")
