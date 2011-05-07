@@ -42,7 +42,7 @@ gem "rails-erd", :group => :development
 gem "wirble", :group => :development
 gem "awesome_print", :group => :development
 gem "hirb", :group => :development
-gem "factory_girl_rails", :group => [:test, :test]
+gem "factory_girl_rails", :group => [:test, :development]
 gem "shoulda", :group => [:test, :shoulda]
 gem "faker", :group => [:test, :test]
 gem "mynyml-redgreen", :group => :test, :require => "redgreen"
