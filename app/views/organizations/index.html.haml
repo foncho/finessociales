@@ -1,0 +1,6 @@
+#organizations
+  %ul.organizations
+    - collection.each do |organization|
+      %li
+        %span= organization.cif
+        %span= organization.name
