@@ -1,5 +1,7 @@
 class Year < ActiveRecord::Base
 
+  has_many :projects, :dependent => :destroy
+
   validates_presence_of :year, :budget, :social_percentage, :foreing_percentage, :environmental_percentage
   validate :check_percentages
 

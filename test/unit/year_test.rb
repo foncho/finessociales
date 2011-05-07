@@ -12,4 +12,11 @@ class YearTest < ActiveSupport::TestCase
     assert_equal 50, year.environmental_budget
   end
 
+  should "have many projects" do
+    year = Factory.create(:year)
+    assert_equal 0, year.projects.count
+    Factory.create(:project, :year => year)
+    assert_equal 1, year.projects.count
+  end
+  
 end
