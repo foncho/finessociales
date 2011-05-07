@@ -5,4 +5,9 @@ class Group < ActiveRecord::Base
 
   validates_presence_of :name
 
+  scope :attended_by_organization, lambda { |organization| 
+    joins(:targets => :projects).
+    where("projects.organization_id == ?", organization.to_param).uniq
+  }
+
 end

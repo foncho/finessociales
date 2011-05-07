@@ -11,6 +11,9 @@ module NavigationHelpers
     when /the home\s?page/
       '/'
 
+    when /the organization page with cif "([^\"]*)"/
+      organization_path(Organization.where(:cif => $1)[0])
+
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
