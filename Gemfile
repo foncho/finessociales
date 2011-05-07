@@ -55,3 +55,6 @@ gem "launchy", :group => :test
 gem "hoptoad_notifier", "~> 2.3.6"
 gem "rails3-generators", :group => :development
 gem "heroku"
+
+# Rack, do some fancy stuff before the requests hit Rails
+gem 'rack-canonical-host', '~> 0.0.3' # Redirect to finessociales.es if accessing through other subdomain like www.
