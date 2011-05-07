@@ -18,5 +18,12 @@ class YearTest < ActiveSupport::TestCase
     Factory.create(:project, :year => year)
     assert_equal 1, year.projects.count
   end
+
+  should "have many group budgets" do
+    year = Factory.create(:year)
+    assert_equal 0, year.group_budgets.count
+    Factory.create(:group_budget, :year => year)
+    assert_equal 1, year.group_budgets.count
+  end
   
 end
