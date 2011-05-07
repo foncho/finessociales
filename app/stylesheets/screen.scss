@@ -10,6 +10,8 @@
 @import "partials/typography";
 @import "compass/css3";
 @import "fancy-buttons";
+@import "compass/utilities/lists";
+
 
 
 
@@ -29,7 +31,10 @@ body{
   @include container;
   @include clearfix;
 }
-
+#header{
+  h1{@include column(8);}
+  ul{@include column(12);}
+}
 #info{
   .section {@include column(6);@include last;}
   .section.double {@include column(12);@include last;}
@@ -58,6 +63,21 @@ body{
 }
 
 #header{padding-top:10px;h1{margin:0;}}
+
+#header{
+  ul{
+    @include horizontal-list;
+    color:white;
+
+    li{
+      margin:12px 0px 0 35px;
+      a{text-decoration:none;font-size:1.4em;color:white;}
+
+      &:hover{a{color:red;}}
+    }
+    .selected{a{color:red;}}
+  }
+}
 
 #info{
   padding-bottom:20px;
