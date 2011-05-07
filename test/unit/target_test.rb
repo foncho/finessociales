@@ -13,13 +13,14 @@ class TargetTest < ActiveSupport::TestCase
   end
 
   should "calculate the total budget of all the projects of the target of an organization" do
+    year = Factory.create(:year)
     organization = Factory.create(:organization)
     target = Factory.create(:target)
-    Factory.create(:project, :target => target, :organization => organization, :budget => 100.0)
-    Factory.create(:project, :target => target, :organization => organization, :budget => 200.0)
-    Factory.create(:project, :target => target, :budget => 800.0)
+    Factory.create(:project, :target => target, :organization => organization, :budget => 100.0, :year => year)
+    Factory.create(:project, :target => target, :organization => organization, :budget => 200.0, :year => year)
+    Factory.create(:project, :target => target, :budget => 800.0, :year => year)
 
-    assert_equal 300.0, target.budget_for_organization(organization)
+    assert_equal 300.0, target.budget_for_organization_year(organization, year)
   end
 
 end

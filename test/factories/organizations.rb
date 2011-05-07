@@ -3,5 +3,4 @@
 Factory.define :organization do |f|
   f.name "Hermanitas de la caridad"
   f.cif "0123456ABCD"
-  f.budget 100000.0
 end

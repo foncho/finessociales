@@ -3,5 +3,4 @@
 Factory.define :target do |f|
   f.name "MyString"
   f.group nil
-  f.budget 100000.0
 end

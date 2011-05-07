@@ -13,17 +13,18 @@ class GroupBudgetTest < ActiveSupport::TestCase
   end
 
   should "calculate the total budget of all the projects of the group of an organization" do
+    year = Factory.create(:year)
     organization = Factory.create(:organization)
     group = Factory.create(:group)
     target1 = Factory.create(:target, :group => group)
-    Factory.create(:project, :target => target1, :organization => organization, :budget => 100.0)
-    Factory.create(:project, :target => target1, :organization => organization, :budget => 200.0)
-    Factory.create(:project, :target => target1, :budget => 800.0)
+    Factory.create(:project, :target => target1, :organization => organization, :budget => 100.0, :year => year)
+    Factory.create(:project, :target => target1, :organization => organization, :budget => 200.0, :year => year)
+    Factory.create(:project, :target => target1, :budget => 800.0, :year => year)
     target2 = Factory.create(:target, :group => group)
-    Factory.create(:project, :target => target2, :organization => organization, :budget => 300.0)
-    Factory.create(:project, :target => target2, :budget => 800.0)
+    Factory.create(:project, :target => target2, :organization => organization, :budget => 300.0, :year => year)
+    Factory.create(:project, :target => target2, :budget => 800.0, :year => year)
 
-    assert_equal 600.0, group.budget_for_organization(organization)
+    assert_equal 600.0, group.budget_for_organization_year(organization, year)
   end
 
 end

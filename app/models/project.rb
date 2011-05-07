@@ -13,4 +13,8 @@ class Project < ActiveRecord::Base
     where("organization_id == ?", organization.to_param)
   }
 
+  scope :of_year, lambda { |year|
+    where("year_id == ?", year.to_param)
+  }
+
 end
