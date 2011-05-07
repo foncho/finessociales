@@ -12,9 +12,6 @@
 @import "fancy-buttons";
 @import "compass/utilities/lists";
 
-
-
-
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
 // @include blueprint
@@ -47,8 +44,14 @@ body{
 }
 
 #content-container{
+    .section{@include column(24);
+
     .title-header{@include column(20);}
-    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}
+    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
+    .section.left{padding-right:90px;}
+    .section.left,.section.right {@include column(11);@include last;
+    .title-header{@include column(7);}
+    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
   }
 
 //TYPOGRAPHY
@@ -80,10 +83,11 @@ body{
 }
 
 #info{
-  padding-bottom:20px;
+  padding:20px 0;
   hr{border: none 0;height: 1px; border-bottom: dashed 1px $fs-dark-color;margin-right:20px;}
   color:white;
-  h2{color:$fs-dark-color;font-size:2.8em;margin: 0;text-align:center;}
+  h2{color:$fs-dark-color;font-size:2.8em;margin: 0;text-align:center;
+    a{text-decoration:none;border-bottom:1px solid $fs-dark-color ;&:hover{color:$fs-light-color;border-bottom:1px solid $fs-light-color ;};;}}
   h3{font-size:3.6em;text-align:center;margin:0;text-align:center;}
   .section{
     padding-top:10px;
@@ -119,13 +123,16 @@ body{
     margin-left:20px;
     margin-top:5px;
     @include fancy-button-structure(18px, 0em, 1px);
-    @include fancy-button-colors(#000, #fe0101, darken(adjust-hue(#124c89, -120), 6));}
+    @include fancy-button-colors(#000, #fe0101, #fe0101);}
   }
 
 //Content container
 #content-container{
-  .title-header,.link-header{height:2.5em;}
-  .title-header,.link-header{a,h3{line-height:2.5em;padding-left:20px;margin:0;}}
+  padding:20px 0;
+  .section{padding:20px 0;}
+  h2{font-weight:normal;font-size:2em;}
+  .title-header,.link-header{height:40px;}
+  .title-header,.link-header{a,h3{text-decoration:none;font-weight:normal;line-height:40px;padding-left:20px;margin:0;}}
   .title-header{font-weight:normal;color:white;background:$footer-color;
   }
   .link-header{text-alignment:center;font-weight:normal;color:white;background:black;margin-left:-8px;
