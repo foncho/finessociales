@@ -1,0 +1,16 @@
+#group
+  %span= resource.name
+  %span= "Total: #{resource.budget}"
+
+  #targets
+    %ul.targets
+    - resource.targets.each do |target|
+      %li
+        %span= target.name
+        %span= target.budget
+        #projects
+          %ul.projects
+          - target.projects.each do |project|
+            %li
+              %span= project.title
+              %span= project.budget
