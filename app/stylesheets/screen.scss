@@ -7,8 +7,11 @@
 // Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
 
-// Import the non-default scaffolding module.
-@import "blueprint/scaffolding";
+@import "partials/typography";
+@import "compass/css3";
+@import "fancy-buttons";
+
+
 
 // To generate css equivalent to the blueprint css but with your
 // configuration applied, uncomment:
@@ -17,33 +20,103 @@
 // If you are doing a lot of stylesheet concatenation, it is suggested
 // that you scope your blueprint styles, so that you can better control
 // what pages use blueprint when stylesheets are concatenated together.
-body.bp {
-  @include blueprint-typography(true);
-  @include blueprint-utilities;
-  @include blueprint-debug;
-  @include blueprint-interaction;
-  // Remove the scaffolding when you're ready to start doing visual design.
-  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+
+// The grid
+body{
+   @include typography();
+}
+#header,#footer,#info,#search,#content-container {
+  @include container;
+  @include clearfix;
 }
 
-form.bp {
-  @include blueprint-form;
-  // You'll probably want to remove the scaffolding once you start styling your site.
-  @include blueprint-scaffolding; }
+#info{
+  .section {@include column(6);@include last;}
+  .section.double {@include column(12);@include last;}
+  .left,.right{@include column(6);@include last;}
+}
 
-// Page layout can be done using mixins applied to your semantic classes and IDs:
-body.two-col {
-  #container {
-    @include container; }
-  #header, #footer {
-    @include column($blueprint-grid-columns); }
-  #sidebar {
-    // One third of the grid columns, rounding down. With 24 cols, this is 8.
-    $sidebar-columns: floor($blueprint-grid-columns / 3);
-    @include column($sidebar-columns); }
-  #content {
-    // Two thirds of the grid columns, rounding up.
-    // With 24 cols, this is 16.
-    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
-    // true means it's the last column in the row
-    @include column($content-columns, true); } }
+#search{
+  h3{@include column(3);}
+  input{@include column(8);}
+}
+
+#content-container{
+    .title-header{@include column(20);}
+    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}
+  }
+
+//TYPOGRAPHY
+
+
+//HEADER
+
+#header-frame{
+  background: $header-color;
+  color:white;
+  //border-bottom: 2px solid $fs-light-color;
+}
+
+#header{padding-top:10px;h1{margin:0;}}
+
+#info{
+  padding-bottom:20px;
+  hr{border: none 0;height: 1px; border-bottom: dashed 1px $fs-dark-color;margin-right:20px;}
+  color:white;
+  h2{color:$fs-dark-color;font-size:2.8em;margin: 0;text-align:center;}
+  h3{font-size:3.6em;text-align:center;margin:0;text-align:center;}
+  .section{
+    padding-top:10px;
+    background: url("/images/help.png") 95% 2% no-repeat;
+    &:hover {background: url("/images/help_hover.png") 95% 2% no-repeat;}
+    h2{color:$fs-dark-color;font-size:3.8em;margin: 0;line-height:1;letter-spacing:0.2em;}
+    h3{font-size:2.2em;text-align:center;margin:0;color:$fs-dark-color;}
+    border-left: dashed 1px $fs-dark-color;
+    p{padding:0 20px;color:$fs-dark-color;}
+    h4{padding:0 20px;font-size:1.2em;color:$fs-dark-color;margin:0;}}
+
+  .double{
+    border:none;
+    background:none;
+    &:hover{background:none;}
+    h2{color:$fs-light-color;font-size:3.6em;margin: 0;}
+    h3{font-size:2.2em;text-align:center;margin:0;color:white;}
+    h4{padding:0 20px;font-size:1.6em;color:$fs-dark-color;margin: 0;}
+    }
+
+}
+
+#info-frame{background: $info-color;}
+#search-frame{background: $search-color;}
+#footer-frame{background-color:$footer_color;@include linear-gradient(color-stops($footer_color, black))}
+
+//SEARCH_BAR
+#search{
+  padding:20px 0;
+  h3{padding-top:5px;font-size:1.4em;text-align:center;margin:0;color:$fs-dark-color;}
+  input{padding: 10px 40px;font-size: 16px;}
+  button{
+    margin-left:20px;
+    margin-top:5px;
+    @include fancy-button-structure(18px, 0em, 1px);
+    @include fancy-button-colors(#000, #fe0101, darken(adjust-hue(#124c89, -120), 6));}
+  }
+
+//Content container
+#content-container{
+  .title-header,.link-header{height:2.5em;}
+  .title-header,.link-header{a,h3{line-height:2.5em;padding-left:20px;margin:0;}}
+  .title-header{font-weight:normal;color:white;background:$footer-color;
+  }
+  .link-header{text-alignment:center;font-weight:normal;color:white;background:black;margin-left:-8px;
+  }
+
+}
+
+
+
+
+
+
+
+
