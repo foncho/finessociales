@@ -621,3 +621,17 @@ body dd {
   background: black;
   margin-left: -8px;
 }
+
+/* line 138, ../../app/stylesheets/screen.scss */
+#footer {
+  color: white;
+  padding: 20px 0;
+}
+/* line 141, ../../app/stylesheets/screen.scss */
+#footer a {
+  color: white;
+}
+/* line 141, ../../app/stylesheets/screen.scss */
+#footer a:hover {
+  color: red;
+}
