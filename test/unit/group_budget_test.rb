@@ -12,4 +12,18 @@ class GroupBudgetTest < ActiveSupport::TestCase
     assert !(Factory.build(:group_budget, :year => year, :group => group).valid?)
   end
 
+  should "calculate the total budget of all the projects of the group of an organization" do
+    organization = Factory.create(:organization)
+    group = Factory.create(:group)
+    target1 = Factory.create(:target, :group => group)
+    Factory.create(:project, :target => target1, :organization => organization, :budget => 100.0)
+    Factory.create(:project, :target => target1, :organization => organization, :budget => 200.0)
+    Factory.create(:project, :target => target1, :budget => 800.0)
+    target2 = Factory.create(:target, :group => group)
+    Factory.create(:project, :target => target2, :organization => organization, :budget => 300.0)
+    Factory.create(:project, :target => target2, :budget => 800.0)
+
+    assert_equal 600.0, group.budget_for_organization(organization)
+  end
+
 end
