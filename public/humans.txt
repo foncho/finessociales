@@ -16,6 +16,6 @@
   Twitter: @albertoperdomo
 
 /* SITE */
-  Canonical URL: http://www.finessociales.es
+  Canonical URL: http://finessociales.es
   Language: Español
   Doctype: HTML5
