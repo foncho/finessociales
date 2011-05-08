@@ -14,8 +14,11 @@ class Group < ActiveRecord::Base
 
   scope :of_year, lambda { |year|
     joins(:group_budgets).
-    where("group_budgets.year_id == ?", year.to_param).uniq
+    where("group_budgets.year_id = ?", year.id).uniq
   }
+
+  # friendly-ids
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
 
   def budget_for_organization_year(organization, year)
     total = 0.0

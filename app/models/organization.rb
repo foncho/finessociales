@@ -18,6 +18,9 @@ class Organization < ActiveRecord::Base
     where("organization_budgets.year_id == ?", year.to_param).order("organization_budgets.budget DESC").limit(limit)
   }
 
+  # friendly-ids
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+
   def budget_for_year(year)
     organization_budgets.where(:year_id => year.to_param).empty? ? 0.0 : organization_budgets.where(:year_id => year.to_param).first.budget
   end

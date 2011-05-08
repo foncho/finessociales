@@ -25,4 +25,7 @@ class Project < ActiveRecord::Base
     where(:year_id => year.id).order('budget DESC').limit(limit)
   }
 
+  # friendly-ids
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+
 end

@@ -9,6 +9,9 @@ class Year < ActiveRecord::Base
 
   default_scope :order => 'year ASC'
 
+  # friendly-ids
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+
   def check_percentages
     total_percentage = social_percentage + foreing_percentage + environmental_percentage
       errors.add(:year, "percentages should sum 100") unless (total_percentage == 100.0)
