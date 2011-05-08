@@ -7,6 +7,6 @@ Then /^I should see the (\w+) top (\d+)$/ do |model, size|
 
   within(data[:selector]) do
     Then %{I should see "#{data[:title]}" in the title}
-    page.should have_xpath('//ol/li', :count => size.to_i)
+    assert page.has_xpath?('//ol/li', :count => size.to_i)
   end
 end
