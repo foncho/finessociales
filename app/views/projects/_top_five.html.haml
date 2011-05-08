@@ -5,7 +5,7 @@
 .section-content
   %ol
     - Project.top_by_year(year, 5).each do |project|
-      %li{ :class => cycle('even', 'odd', :name => 'organizations')}
+      %li{ :class => cycle('even', 'odd', :name => 'projects')}
         .title.short
           = link_to project.try(:title), '#'
         .budget
