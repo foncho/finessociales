@@ -6,6 +6,8 @@ class Year < ActiveRecord::Base
   validates_presence_of :year, :budget, :social_percentage, :foreing_percentage, :environmental_percentage
   validate :check_percentages
 
+  default_scope :order => 'year ASC'
+
   def check_percentages
     total_percentage = social_percentage + foreing_percentage + environmental_percentage
       errors.add(:year, "percentages should sum 100") unless (total_percentage == 100.0)

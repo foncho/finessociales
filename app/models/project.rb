@@ -17,4 +17,8 @@ class Project < ActiveRecord::Base
     where("year_id == ?", year.to_param)
   }
 
+  scope :top_by_year, lambda { |year, limit|
+    where(:year_id => year.to_param).order('budget DESC').limit(limit)
+  }
+
 end

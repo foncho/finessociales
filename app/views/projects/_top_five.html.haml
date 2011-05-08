@@ -1,0 +1,10 @@
+.title-header
+  %h3 Proyectos
+.link-header
+  %a Ir a proyectos
+.content
+  %ol
+    - Project.top_by_year(year, 5).each do |project|
+      %li
+        = link_to project.try(:title), '#'
+        %p.budget= number_to_currency(project.budget, :unit => 'euros', :format => '%n %u')

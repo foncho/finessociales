@@ -1,0 +1,10 @@
+.title-header
+  %h3 Entidades
+.link-header
+  %a Ir a entidades
+.content
+  %ol
+    - Organization.top_by_year(year, 5).each do |organization|
+      %li
+        = link_to organization.try(:name), organization
+        %p.budget= number_to_currency(organization.budget(year), :unit => 'euros', :format => '%n %u')

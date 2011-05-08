@@ -1,8 +1,10 @@
-class YearsController < ApplicationController
-  def show
-  end
+class YearsController < InheritedResources::Base
 
-  def index
+  respond_to :html
+  actions :show
+
+  def show
+    params[:id].blank? ? @year = Year.last : show!
   end
 
 end
