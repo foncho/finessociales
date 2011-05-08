@@ -3,21 +3,22 @@
     %h2= raw("En #{content_tag(:span, resource.year.next)} se repartieron para fines sociales entre #{link_to resource.total_projects, groups_path} proyectos y #{link_to resource.total_organizations, organizations_path} organizaciones un total de")
     %h3= "#{(resource.budget/1000000).round} millones de euros"
     %hr
-    .section.double
+    .section.double#section-social
       .left
         %h2= "#{resource.social_percentage.round}%"
         %h3= "#{(resource.social_budget/1000000).round} m. €"
         %h4 Proyectos sociales
       .right
         %p El Ministerio de Sanidad y Política social distribuye este dinero, que cada año se adjudica y se publica en el BOE. Más información aquí.
-    .section
+    .section#section-foreing
       %h2= "#{resource.foreing_percentage.round}%"
       %h3= "#{(resource.foreing_budget/1000000).round} m. €"
       %h4 Proyectos de cooperación en paises de desarrollo
-    .section
+    .section#section-environmental
       %h2= "#{resource.environmental_percentage.round}%"
       %h3= "#{(resource.environmental_budget/1000000).round} m. €"
       %h4 Proyectos de cooperación en paises de desarrollo
+#message-frame{:style => "display: none"}
 #search-frame
   #search
     %h3 Busca
