@@ -23,6 +23,10 @@
 // The grid
 body{
    @include typography();
+   background:black;
+}
+#content{
+  background:white;
 }
 #header,#footer,#info,#search,#content-container {
   @include container;
