@@ -29,11 +29,10 @@
   .section
     .title-header
       %h3 Colectivos
-      #group-graph
     .link-header
       = link_to 'Ir a colectivos', groups_path
     .section-content
-      %p contenido
+      #group-graph
   .section.left
     = render 'organizations/top_five', :year => @year
 
