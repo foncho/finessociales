@@ -44,14 +44,19 @@ body{
 }
 
 #content-container{
-    .section{@include column(24);
-
+    .section{@include column(24);@include last;
+    .info-container{@include column(24);}
+    .section-content{@include column(23);padding-right:34px;}
+    //title + link = 24
     .title-header{@include column(20);}
     .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
+
     .section.left{padding-right:90px;}
     .section.left,.section.right {@include column(11);@include last;
+    .section-content{@include column(10);}
     .title-header{@include column(7);}
     .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
+
   }
 
 //TYPOGRAPHY
@@ -136,6 +141,16 @@ body{
   .title-header{font-weight:normal;color:white;background:$footer-color;
   }
   .link-header{text-alignment:center;font-weight:normal;color:white;background:black;margin-left:-8px;
+  }
+
+  //content of the section
+  .section-content{
+    padding-right:10px;
+    background: url("/images/section_back.png") 50% 50% repeat;
+  }
+  //info-container
+  .info-container{
+
   }
 
 }

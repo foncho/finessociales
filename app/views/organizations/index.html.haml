@@ -1,6 +1,12 @@
-#organizations
+#search-frame
+  #search
+    %h3 Busca
+    %input
+    %button Buscar
+#content-container
+  %h2 Organizaciones 2011
   %ul.organizations
     - collection.each do |organization|
       %li
         %span= organization.cif
-        %span= organization.name
+        =link_to(organization.name,organization)
