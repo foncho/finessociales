@@ -57,10 +57,7 @@ body{
       .link-header,.budget{@include column(4);@include clearfix;@include last}
       .short{@include column(7);}
       .programs li{@include clearfix;@include column(24);}
-
       }
-
-
     .section.left,.section.right {
       @include column(11);
       .section-content{@include column(11);}
@@ -142,7 +139,7 @@ body{
     @include fancy-button-structure(18px, 0em, 1px);
     @include fancy-button-colors(#000, #fe0101, #fe0101);}
   }
-
+.even{background:#ddd;}
 //Content container
 #content-container{
   padding:20px 0;
@@ -166,7 +163,6 @@ body{
   .section-content{
     ol{
       list-style-type:none;
-      .even{background:#ddd;}
       li{border-bottom: solid 1px #eee;@include clearfix;padding:20px 0;
         a{color:black;&:hover{color:red;};padding:0 20px;display:block;}
         p{text-align:right;padding:0 20px;}}
@@ -180,7 +176,14 @@ body{
   .info-container{}
 
 }
-
+//TABLE
+table{
+  a{color:black;
+    &:hover{color:red;}}
+  th{min-width:120px;}
+  td,th{padding:10px;}
+  .header{background:$footer-color;color:white;}
+}
 //ORGANIZATIONS
   .programs {
     .title{font-weight:bold;}

@@ -13,7 +13,7 @@
         %th= y.year
       %th Total
     - collection.each do |organization|
-      %tr
+      %tr{ :class => cycle('odd', 'even')}
         %td= organization.cif
         %td=link_to(organization.name,organization)
         - Year.all.reverse.each do |y|
