@@ -233,6 +233,7 @@ body dd {
   float: left;
   margin-right: 10px;
   width: 310px;
+  padding-right: 80px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #header h1 {
@@ -243,7 +244,7 @@ body dd {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 470px;
+  width: 550px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #header ul {
@@ -876,10 +877,6 @@ table .header {
   border: none;
   font-weight: normal;
 }
-/* line 209, ../../app/stylesheets/screen.scss */
-.programs .projects .even {
-  background: #eee;
-}
 
 /* line 212, ../../app/stylesheets/screen.scss */
 .section-content .projects .budget {
@@ -905,21 +902,17 @@ table .header {
 .section-content .projects .budget span {
   padding-right: 20px;
 }
-/* line 217, ../../app/stylesheets/screen.scss */
-.section-content .projects .even {
-  background: #eee;
-}
 
-/* line 221, ../../app/stylesheets/screen.scss */
+/* line 220, ../../app/stylesheets/screen.scss */
 #footer {
   color: white;
   padding: 20px 0;
 }
-/* line 224, ../../app/stylesheets/screen.scss */
+/* line 223, ../../app/stylesheets/screen.scss */
 #footer a {
   color: white;
 }
-/* line 224, ../../app/stylesheets/screen.scss */
+/* line 223, ../../app/stylesheets/screen.scss */
 #footer a:hover {
   color: red;
 }
