@@ -3,6 +3,8 @@ Finessociales::Application.routes.draw do
   resources :organizations, :only => [:index, :show]
   resources :groups, :only => [:index, :show]
 
+  get '/about' => "pages#show", :page => 'about'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
