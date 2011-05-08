@@ -42,7 +42,12 @@ body{
   .left,.right{@include column(6);}
   .right{@include last;}
 }
-
+#message-frame{
+  @include container;
+  background: url("/images/section_back.png") 50% 50% repeat;
+  font-size:1.2em;
+  padding:20px;
+}
 #search{
 
   h3{@include column(3);@include prepend(3);}
