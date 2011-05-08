@@ -516,48 +516,49 @@ body dd {
   padding: 20px 0;
   color: white;
 }
-/* line 101, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 #info hr {
   border: none 0;
   height: 1px;
   border-bottom: dashed 1px #376b6b;
   margin-right: 20px;
 }
-/* line 103, ../../app/stylesheets/screen.scss */
+/* line 104, ../../app/stylesheets/screen.scss */
 #info h2 {
   color: #376b6b;
   font-size: 2.8em;
   margin: 0;
   text-align: center;
 }
-/* line 104, ../../app/stylesheets/screen.scss */
+/* line 109, ../../app/stylesheets/screen.scss */
 #info h2 a {
   text-decoration: none;
+  color: #376b6b;
   border-bottom: 1px solid #376b6b;
 }
-/* line 104, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 #info h2 a:hover {
   color: #73dada;
   border-bottom: 1px solid #73dada;
 }
-/* line 105, ../../app/stylesheets/screen.scss */
+/* line 112, ../../app/stylesheets/screen.scss */
 #info h3 {
   font-size: 3.6em;
   text-align: center;
   margin: 0;
   text-align: center;
 }
-/* line 106, ../../app/stylesheets/screen.scss */
+/* line 113, ../../app/stylesheets/screen.scss */
 #info .section {
   padding-top: 10px;
   background: url("/images/help.png") 95% 2% no-repeat;
   border-left: dashed 1px #376b6b;
 }
-/* line 109, ../../app/stylesheets/screen.scss */
+/* line 116, ../../app/stylesheets/screen.scss */
 #info .section:hover {
   background: url("/images/help_hover.png") 95% 2% no-repeat;
 }
-/* line 110, ../../app/stylesheets/screen.scss */
+/* line 117, ../../app/stylesheets/screen.scss */
 #info .section h2 {
   color: #376b6b;
   font-size: 3.8em;
@@ -565,48 +566,48 @@ body dd {
   line-height: 1;
   letter-spacing: 0.2em;
 }
-/* line 111, ../../app/stylesheets/screen.scss */
+/* line 118, ../../app/stylesheets/screen.scss */
 #info .section h3 {
   font-size: 2.2em;
   text-align: center;
   margin: 0;
   color: #376b6b;
 }
-/* line 113, ../../app/stylesheets/screen.scss */
+/* line 120, ../../app/stylesheets/screen.scss */
 #info .section p {
   padding: 0 20px;
   color: #376b6b;
 }
-/* line 114, ../../app/stylesheets/screen.scss */
+/* line 121, ../../app/stylesheets/screen.scss */
 #info .section h4 {
   padding: 0 20px;
   font-size: 1.2em;
   color: #376b6b;
   margin: 0;
 }
-/* line 116, ../../app/stylesheets/screen.scss */
+/* line 124, ../../app/stylesheets/screen.scss */
 #info .double {
   border: none;
   background: none;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 #info .double:hover {
   background: none;
 }
-/* line 120, ../../app/stylesheets/screen.scss */
+/* line 128, ../../app/stylesheets/screen.scss */
 #info .double h2 {
   color: #73dada;
   font-size: 3.6em;
   margin: 0;
 }
-/* line 121, ../../app/stylesheets/screen.scss */
+/* line 129, ../../app/stylesheets/screen.scss */
 #info .double h3 {
   font-size: 2.2em;
   text-align: center;
   margin: 0;
   color: white;
 }
-/* line 122, ../../app/stylesheets/screen.scss */
+/* line 130, ../../app/stylesheets/screen.scss */
 #info .double h4 {
   padding: 0 20px;
   font-size: 1.6em;
@@ -614,17 +615,17 @@ body dd {
   margin: 0;
 }
 
-/* line 127, ../../app/stylesheets/screen.scss */
+/* line 135, ../../app/stylesheets/screen.scss */
 #info-frame {
   background: #56a8a8;
 }
 
-/* line 128, ../../app/stylesheets/screen.scss */
+/* line 136, ../../app/stylesheets/screen.scss */
 #search-frame {
   background: #78bebe;
 }
 
-/* line 129, ../../app/stylesheets/screen.scss */
+/* line 137, ../../app/stylesheets/screen.scss */
 #footer-frame {
   background-color: #27282b;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #27282b), color-stop(100%, #000000));
@@ -634,11 +635,11 @@ body dd {
   background-image: linear-gradient(top, #27282b, #000000);
 }
 
-/* line 132, ../../app/stylesheets/screen.scss */
+/* line 140, ../../app/stylesheets/screen.scss */
 #search {
   padding: 20px 0;
 }
-/* line 134, ../../app/stylesheets/screen.scss */
+/* line 142, ../../app/stylesheets/screen.scss */
 #search h3 {
   padding-top: 5px;
   font-size: 1.4em;
@@ -646,12 +647,12 @@ body dd {
   margin: 0;
   color: #376b6b;
 }
-/* line 135, ../../app/stylesheets/screen.scss */
+/* line 143, ../../app/stylesheets/screen.scss */
 #search input {
   padding: 10px 40px;
   font-size: 16px;
 }
-/* line 136, ../../app/stylesheets/screen.scss */
+/* line 144, ../../app/stylesheets/screen.scss */
 #search button {
   margin-left: 20px;
   margin-top: 5px;
@@ -717,203 +718,203 @@ body dd {
   color: white;
 }
 
-/* line 142, ../../app/stylesheets/screen.scss */
+/* line 150, ../../app/stylesheets/screen.scss */
 .even {
   background: #ddd;
 }
 
-/* line 144, ../../app/stylesheets/screen.scss */
+/* line 152, ../../app/stylesheets/screen.scss */
 #content-container {
   padding: 20px 0;
 }
-/* line 146, ../../app/stylesheets/screen.scss */
+/* line 154, ../../app/stylesheets/screen.scss */
 #content-container .section {
   padding: 20px 0;
 }
-/* line 147, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 #content-container h2 {
   font-weight: normal;
   font-size: 2em;
 }
-/* line 148, ../../app/stylesheets/screen.scss */
+/* line 156, ../../app/stylesheets/screen.scss */
 #content-container .title-header, #content-container .link-header {
   height: 40px;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 149, ../../app/stylesheets/screen.scss */
+/* line 157, ../../app/stylesheets/screen.scss */
 #content-container .title-header a, #content-container .title-header h3, #content-container .title-header p, #content-container .link-header a, #content-container .link-header h3, #content-container .link-header p {
   text-decoration: none;
   font-weight: normal;
   line-height: 40px;
   margin: 0;
 }
-/* line 149, ../../app/stylesheets/screen.scss */
+/* line 157, ../../app/stylesheets/screen.scss */
 #content-container .title-header h3, #content-container .title-header p, #content-container .link-header h3, #content-container .link-header p {
   padding-left: 20px;
 }
-/* line 150, ../../app/stylesheets/screen.scss */
+/* line 158, ../../app/stylesheets/screen.scss */
 #content-container .title-header {
   font-weight: normal;
   color: white;
   background: #27282b;
 }
-/* line 151, ../../app/stylesheets/screen.scss */
+/* line 159, ../../app/stylesheets/screen.scss */
 #content-container .link-header {
   text-align: center;
   font-weight: normal;
   color: white;
   background: black;
 }
-/* line 156, ../../app/stylesheets/screen.scss */
+/* line 164, ../../app/stylesheets/screen.scss */
 #content-container .link-header:hover {
   background: red;
 }
-/* line 158, ../../app/stylesheets/screen.scss */
+/* line 166, ../../app/stylesheets/screen.scss */
 #content-container .link-header a {
   display: block;
   color: white;
 }
-/* line 159, ../../app/stylesheets/screen.scss */
+/* line 167, ../../app/stylesheets/screen.scss */
 #content-container .link-header span {
   font-size: 120%;
   line-height: 40px;
 }
-/* line 160, ../../app/stylesheets/screen.scss */
+/* line 168, ../../app/stylesheets/screen.scss */
 #content-container #content-container.budget .link-header {
   text-align: right;
 }
-/* line 164, ../../app/stylesheets/screen.scss */
+/* line 172, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol {
   list-style-type: none;
 }
-/* line 166, ../../app/stylesheets/screen.scss */
+/* line 174, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li {
   border-bottom: solid 1px #eee;
   overflow: hidden;
   *zoom: 1;
   padding: 20px 0;
 }
-/* line 167, ../../app/stylesheets/screen.scss */
+/* line 175, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a {
   color: black;
   padding: 0 20px;
   display: block;
 }
-/* line 167, ../../app/stylesheets/screen.scss */
+/* line 175, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a:hover {
   color: red;
 }
-/* line 168, ../../app/stylesheets/screen.scss */
+/* line 176, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li p {
   text-align: right;
   padding: 0 20px;
 }
-/* line 171, ../../app/stylesheets/screen.scss */
+/* line 179, ../../app/stylesheets/screen.scss */
 #content-container .programs li, #content-container .projects li {
   list-style-type: none;
 }
 
-/* line 181, ../../app/stylesheets/screen.scss */
+/* line 189, ../../app/stylesheets/screen.scss */
 table a {
   color: black;
 }
-/* line 182, ../../app/stylesheets/screen.scss */
+/* line 190, ../../app/stylesheets/screen.scss */
 table a:hover {
   color: red;
 }
-/* line 183, ../../app/stylesheets/screen.scss */
+/* line 191, ../../app/stylesheets/screen.scss */
 table th {
   min-width: 120px;
 }
-/* line 184, ../../app/stylesheets/screen.scss */
+/* line 192, ../../app/stylesheets/screen.scss */
 table td, table th {
   padding: 10px;
 }
-/* line 185, ../../app/stylesheets/screen.scss */
+/* line 193, ../../app/stylesheets/screen.scss */
 table .header {
   background: #27282b;
   color: white;
 }
 
-/* line 189, ../../app/stylesheets/screen.scss */
+/* line 197, ../../app/stylesheets/screen.scss */
 .programs .title {
   font-weight: bold;
 }
-/* line 190, ../../app/stylesheets/screen.scss */
+/* line 198, ../../app/stylesheets/screen.scss */
 .programs .budget {
   font-weight: bold;
 }
-/* line 191, ../../app/stylesheets/screen.scss */
+/* line 199, ../../app/stylesheets/screen.scss */
 .programs .budget {
   text-align: right;
 }
-/* line 192, ../../app/stylesheets/screen.scss */
+/* line 200, ../../app/stylesheets/screen.scss */
 .programs li {
   padding: 10px 0;
 }
-/* line 194, ../../app/stylesheets/screen.scss */
+/* line 202, ../../app/stylesheets/screen.scss */
 .programs li .title span {
   padding-left: 20px;
   display: block;
 }
-/* line 195, ../../app/stylesheets/screen.scss */
+/* line 203, ../../app/stylesheets/screen.scss */
 .programs li .budget span {
   padding-right: 20px;
 }
-/* line 196, ../../app/stylesheets/screen.scss */
+/* line 204, ../../app/stylesheets/screen.scss */
 .programs li ul li {
   border: none;
 }
-/* line 199, ../../app/stylesheets/screen.scss */
+/* line 207, ../../app/stylesheets/screen.scss */
 .programs .projects .title, .programs .projects .budget {
   border: none;
   font-weight: normal;
 }
-/* line 199, ../../app/stylesheets/screen.scss */
+/* line 207, ../../app/stylesheets/screen.scss */
 .programs .projects .even {
   background: #eee;
 }
 
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 210, ../../app/stylesheets/screen.scss */
 .section-content .projects .budget {
   text-align: right;
 }
-/* line 203, ../../app/stylesheets/screen.scss */
+/* line 211, ../../app/stylesheets/screen.scss */
 .section-content .projects li {
   padding: 10px 0;
   overflow: hidden;
   *zoom: 1;
 }
-/* line 204, ../../app/stylesheets/screen.scss */
+/* line 212, ../../app/stylesheets/screen.scss */
 .section-content .projects .title p, .section-content .projects span, .section-content .projects a {
   padding-left: 20px;
   display: block;
   color: black;
 }
-/* line 205, ../../app/stylesheets/screen.scss */
+/* line 213, ../../app/stylesheets/screen.scss */
 .section-content .projects .title a:hover {
   color: red;
 }
-/* line 206, ../../app/stylesheets/screen.scss */
+/* line 214, ../../app/stylesheets/screen.scss */
 .section-content .projects .budget span {
   padding-right: 20px;
 }
-/* line 207, ../../app/stylesheets/screen.scss */
+/* line 215, ../../app/stylesheets/screen.scss */
 .section-content .projects .even {
   background: #eee;
 }
 
-/* line 211, ../../app/stylesheets/screen.scss */
+/* line 219, ../../app/stylesheets/screen.scss */
 #footer {
   color: white;
   padding: 20px 0;
 }
-/* line 214, ../../app/stylesheets/screen.scss */
+/* line 222, ../../app/stylesheets/screen.scss */
 #footer a {
   color: white;
 }
-/* line 214, ../../app/stylesheets/screen.scss */
+/* line 222, ../../app/stylesheets/screen.scss */
 #footer a:hover {
   color: red;
 }

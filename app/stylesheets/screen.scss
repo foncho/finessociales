@@ -98,10 +98,17 @@ body{
 
 #info{
   padding:20px 0;
+  a{}
   hr{border: none 0;height: 1px; border-bottom: dashed 1px $fs-dark-color;margin-right:20px;}
   color:white;
-  h2{color:$fs-dark-color;font-size:2.8em;margin: 0;text-align:center;
-    a{text-decoration:none;border-bottom:1px solid $fs-dark-color ;&:hover{color:$fs-light-color;border-bottom:1px solid $fs-light-color ;};;}}
+  h2{
+    color:$fs-dark-color;
+    font-size:2.8em;
+    margin: 0;
+    text-align:center;
+    a{text-decoration:none;color:$fs-dark-color;;
+      border-bottom:1px solid $fs-dark-color;
+      &:hover{color:$fs-light-color;border-bottom:1px solid $fs-light-color ;};;}}
   h3{font-size:3.6em;text-align:center;margin:0;text-align:center;}
   .section{
     padding-top:10px;
@@ -112,6 +119,7 @@ body{
     border-left: dashed 1px $fs-dark-color;
     p{padding:0 20px;color:$fs-dark-color;}
     h4{padding:0 20px;font-size:1.2em;color:$fs-dark-color;margin:0;}}
+
 
   .double{
     border:none;
