@@ -41,9 +41,8 @@
           = raw "#{link_to('finessociales.es', root_path)} es un proyecto opensource desarrollado para el #{link_to('Desafío Abredatos 2011', 'http://www.abredatos.es/', :target => '_blank')}. #{link_to('Código fuente', 'https://github.com/aentos/finessociales', :target => '_blank')}"
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" }
-    = javascript_include_tag("jquery-1.4.2.min", "rails", "highcharts", "group_chart", "add_div" )
-    = content_for :footer
-    - if Rails.env.production?
+    = javascript_include_tag("rails", "highcharts", "group_chart", "add_div" )
+    = content_for :footer    - if Rails.env.production?
       :javascript
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-23205565-1']);
