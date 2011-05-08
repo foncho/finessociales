@@ -33,7 +33,7 @@ Feature: Organization Show
      # Organization information
      Then I should see the following organizations list
          | CIF        | Entidad         | 2011       | 2010       | Total      |
-         | G-12345678 | Wadus Red Cross | 2,000.00 € | 1,000.00 € | 3,000.00 € |
+         | G-12345678 | Wadus Red Cross | 2.000,00 € | 1.000,00 € | 3.000,00 € |
 
      # # First group
      #  And I should see "Refugiados"

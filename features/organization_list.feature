@@ -14,7 +14,7 @@ Feature: Organization List
        Then I should see "G-12345678"
         And I should see the following organizations list
            | CIF        | Entidad         | 2011       | 2010       | Total      |
-           | G-12345678 | Wadus Red Cross | 2,000.00 € | 1,000.00 € | 3,000.00 € |
+           | G-12345678 | Wadus Red Cross | 2.000,00 € | 1.000,00 € | 3.000,00 € |
 
   Scenario: Go to the organizations page
       Given a year exists
