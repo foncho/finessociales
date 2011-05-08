@@ -5,6 +5,8 @@
 .section-content
   %ol
     - Organization.top_by_year(year, 5).each do |organization|
-      %li{ :class => cycle('odd', 'even')}
-        = link_to organization.try(:name), organization
-        %p.budget= number_to_currency(organization.budget(year), :unit => 'euros', :format => '%n %u')
+      %li{ :class => cycle('even', 'odd',:name => 'organizations')}
+        .title.short
+          = link_to organization.try(:name), organization
+        .budget
+          %p= number_to_currency(organization.budget(year), :unit => '€', :format => '%n %u')

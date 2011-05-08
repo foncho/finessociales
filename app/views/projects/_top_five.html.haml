@@ -5,6 +5,8 @@
 .section-content
   %ol
     - Project.top_by_year(year, 5).each do |project|
-      %li{ :class => cycle('even', 'odd')}
-        = link_to project.try(:title), '#'
-        %p.budget= number_to_currency(project.budget, :unit => 'euros', :format => '%n %u')
+      %li{ :class => cycle('even', 'odd', :name => 'organizations')}
+        .title.short
+          = link_to project.try(:title), '#'
+        .budget
+          %p= number_to_currency(project.budget, :unit => '€', :format => '%n %u')

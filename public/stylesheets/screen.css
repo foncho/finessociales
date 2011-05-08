@@ -332,19 +332,19 @@ body dd {
 * html #content-container .section .section-content {
   overflow-x: hidden;
 }
-/* line 52, ../../app/stylesheets/screen.scss */
-#content-container .section .title-header {
+/* line 51, ../../app/stylesheets/screen.scss */
+#content-container .section .title-header, #content-container .section .title {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 790px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content-container .section .title-header {
+* html #content-container .section .title-header, * html #content-container .section .title {
   overflow-x: hidden;
 }
-/* line 53, ../../app/stylesheets/screen.scss */
-#content-container .section .link-header {
+/* line 52, ../../app/stylesheets/screen.scss */
+#content-container .section .link-header, #content-container .section .budget {
   display: inline;
   float: left;
   margin-right: 10px;
@@ -354,10 +354,34 @@ body dd {
   margin-right: 0;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html #content-container .section .link-header {
+* html #content-container .section .link-header, * html #content-container .section .budget {
   overflow-x: hidden;
 }
-/* line 57, ../../app/stylesheets/screen.scss */
+/* line 53, ../../app/stylesheets/screen.scss */
+#content-container .section .short {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 270px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content-container .section .short {
+  overflow-x: hidden;
+}
+/* line 54, ../../app/stylesheets/screen.scss */
+#content-container .section .programs li {
+  overflow: hidden;
+  *zoom: 1;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p0@rails3/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #content-container .section .programs li {
+  overflow-x: hidden;
+}
+/* line 59, ../../app/stylesheets/screen.scss */
 #content-container .section.left, #content-container .section.right {
   display: inline;
   float: left;
@@ -368,7 +392,7 @@ body dd {
 * html #content-container .section.left, * html #content-container .section.right {
   overflow-x: hidden;
 }
-/* line 59, ../../app/stylesheets/screen.scss */
+/* line 61, ../../app/stylesheets/screen.scss */
 #content-container .section.left .section-content, #content-container .section.right .section-content {
   display: inline;
   float: left;
@@ -379,7 +403,7 @@ body dd {
 * html #content-container .section.left .section-content, * html #content-container .section.right .section-content {
   overflow-x: hidden;
 }
-/* line 60, ../../app/stylesheets/screen.scss */
+/* line 62, ../../app/stylesheets/screen.scss */
 #content-container .section.left .title-header, #content-container .section.right .title-header {
   display: inline;
   float: left;
@@ -390,7 +414,7 @@ body dd {
 * html #content-container .section.left .title-header, * html #content-container .section.right .title-header {
   overflow-x: hidden;
 }
-/* line 61, ../../app/stylesheets/screen.scss */
+/* line 63, ../../app/stylesheets/screen.scss */
 #content-container .section.left .link-header, #content-container .section.right .link-header {
   display: inline;
   float: left;
@@ -402,31 +426,31 @@ body dd {
 * html #content-container .section.left .link-header, * html #content-container .section.right .link-header {
   overflow-x: hidden;
 }
-/* line 63, ../../app/stylesheets/screen.scss */
+/* line 65, ../../app/stylesheets/screen.scss */
 #content-container .section.left {
   padding-right: 80px;
 }
-/* line 64, ../../app/stylesheets/screen.scss */
+/* line 66, ../../app/stylesheets/screen.scss */
 #content-container .section.right {
   margin-right: 0;
 }
 
-/* line 73, ../../app/stylesheets/screen.scss */
+/* line 74, ../../app/stylesheets/screen.scss */
 #header-frame {
   background: black;
   color: white;
 }
 
-/* line 79, ../../app/stylesheets/screen.scss */
+/* line 80, ../../app/stylesheets/screen.scss */
 #header {
   padding-top: 10px;
 }
-/* line 79, ../../app/stylesheets/screen.scss */
+/* line 80, ../../app/stylesheets/screen.scss */
 #header h1 {
   margin: 0;
 }
 
-/* line 82, ../../app/stylesheets/screen.scss */
+/* line 83, ../../app/stylesheets/screen.scss */
 #header ul {
   margin: 0;
   padding: 0;
@@ -458,72 +482,72 @@ body dd {
 #header ul li.last {
   padding-right: 0;
 }
-/* line 86, ../../app/stylesheets/screen.scss */
+/* line 87, ../../app/stylesheets/screen.scss */
 #header ul li {
   margin: 12px 0px 0 35px;
 }
-/* line 88, ../../app/stylesheets/screen.scss */
+/* line 89, ../../app/stylesheets/screen.scss */
 #header ul li a {
   text-decoration: none;
   font-size: 1.4em;
   color: white;
 }
-/* line 90, ../../app/stylesheets/screen.scss */
+/* line 91, ../../app/stylesheets/screen.scss */
 #header ul li:hover a {
   color: red;
 }
-/* line 92, ../../app/stylesheets/screen.scss */
+/* line 93, ../../app/stylesheets/screen.scss */
 #header ul .selected a {
   color: red;
 }
 
-/* line 96, ../../app/stylesheets/screen.scss */
+/* line 97, ../../app/stylesheets/screen.scss */
 #info {
   padding: 20px 0;
   color: white;
 }
-/* line 98, ../../app/stylesheets/screen.scss */
+/* line 99, ../../app/stylesheets/screen.scss */
 #info hr {
   border: none 0;
   height: 1px;
   border-bottom: dashed 1px #376b6b;
   margin-right: 20px;
 }
-/* line 100, ../../app/stylesheets/screen.scss */
+/* line 101, ../../app/stylesheets/screen.scss */
 #info h2 {
   color: #376b6b;
   font-size: 2.8em;
   margin: 0;
   text-align: center;
 }
-/* line 101, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 #info h2 a {
   text-decoration: none;
   border-bottom: 1px solid #376b6b;
 }
-/* line 101, ../../app/stylesheets/screen.scss */
+/* line 102, ../../app/stylesheets/screen.scss */
 #info h2 a:hover {
   color: #73dada;
   border-bottom: 1px solid #73dada;
 }
-/* line 102, ../../app/stylesheets/screen.scss */
+/* line 103, ../../app/stylesheets/screen.scss */
 #info h3 {
   font-size: 3.6em;
   text-align: center;
   margin: 0;
   text-align: center;
 }
-/* line 103, ../../app/stylesheets/screen.scss */
+/* line 104, ../../app/stylesheets/screen.scss */
 #info .section {
   padding-top: 10px;
   background: url("/images/help.png") 95% 2% no-repeat;
   border-left: dashed 1px #376b6b;
 }
-/* line 106, ../../app/stylesheets/screen.scss */
+/* line 107, ../../app/stylesheets/screen.scss */
 #info .section:hover {
   background: url("/images/help_hover.png") 95% 2% no-repeat;
 }
-/* line 107, ../../app/stylesheets/screen.scss */
+/* line 108, ../../app/stylesheets/screen.scss */
 #info .section h2 {
   color: #376b6b;
   font-size: 3.8em;
@@ -531,48 +555,48 @@ body dd {
   line-height: 1;
   letter-spacing: 0.2em;
 }
-/* line 108, ../../app/stylesheets/screen.scss */
+/* line 109, ../../app/stylesheets/screen.scss */
 #info .section h3 {
   font-size: 2.2em;
   text-align: center;
   margin: 0;
   color: #376b6b;
 }
-/* line 110, ../../app/stylesheets/screen.scss */
+/* line 111, ../../app/stylesheets/screen.scss */
 #info .section p {
   padding: 0 20px;
   color: #376b6b;
 }
-/* line 111, ../../app/stylesheets/screen.scss */
+/* line 112, ../../app/stylesheets/screen.scss */
 #info .section h4 {
   padding: 0 20px;
   font-size: 1.2em;
   color: #376b6b;
   margin: 0;
 }
-/* line 113, ../../app/stylesheets/screen.scss */
+/* line 114, ../../app/stylesheets/screen.scss */
 #info .double {
   border: none;
   background: none;
 }
-/* line 116, ../../app/stylesheets/screen.scss */
+/* line 117, ../../app/stylesheets/screen.scss */
 #info .double:hover {
   background: none;
 }
-/* line 117, ../../app/stylesheets/screen.scss */
+/* line 118, ../../app/stylesheets/screen.scss */
 #info .double h2 {
   color: #73dada;
   font-size: 3.6em;
   margin: 0;
 }
-/* line 118, ../../app/stylesheets/screen.scss */
+/* line 119, ../../app/stylesheets/screen.scss */
 #info .double h3 {
   font-size: 2.2em;
   text-align: center;
   margin: 0;
   color: white;
 }
-/* line 119, ../../app/stylesheets/screen.scss */
+/* line 120, ../../app/stylesheets/screen.scss */
 #info .double h4 {
   padding: 0 20px;
   font-size: 1.6em;
@@ -580,17 +604,17 @@ body dd {
   margin: 0;
 }
 
-/* line 124, ../../app/stylesheets/screen.scss */
+/* line 125, ../../app/stylesheets/screen.scss */
 #info-frame {
   background: #56a8a8;
 }
 
-/* line 125, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
 #search-frame {
   background: #78bebe;
 }
 
-/* line 126, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 #footer-frame {
   background-color: #27282b;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #27282b), color-stop(100%, #000000));
@@ -600,11 +624,11 @@ body dd {
   background-image: linear-gradient(top, #27282b, #000000);
 }
 
-/* line 129, ../../app/stylesheets/screen.scss */
+/* line 130, ../../app/stylesheets/screen.scss */
 #search {
   padding: 20px 0;
 }
-/* line 131, ../../app/stylesheets/screen.scss */
+/* line 132, ../../app/stylesheets/screen.scss */
 #search h3 {
   padding-top: 5px;
   font-size: 1.4em;
@@ -612,12 +636,12 @@ body dd {
   margin: 0;
   color: #376b6b;
 }
-/* line 132, ../../app/stylesheets/screen.scss */
+/* line 133, ../../app/stylesheets/screen.scss */
 #search input {
   padding: 10px 40px;
   font-size: 16px;
 }
-/* line 133, ../../app/stylesheets/screen.scss */
+/* line 134, ../../app/stylesheets/screen.scss */
 #search button {
   margin-left: 20px;
   margin-top: 5px;
@@ -683,88 +707,138 @@ body dd {
   color: white;
 }
 
-/* line 141, ../../app/stylesheets/screen.scss */
+/* line 142, ../../app/stylesheets/screen.scss */
 #content-container {
   padding: 20px 0;
 }
-/* line 143, ../../app/stylesheets/screen.scss */
+/* line 144, ../../app/stylesheets/screen.scss */
 #content-container .section {
   padding: 20px 0;
 }
-/* line 144, ../../app/stylesheets/screen.scss */
+/* line 145, ../../app/stylesheets/screen.scss */
 #content-container h2 {
   font-weight: normal;
   font-size: 2em;
 }
-/* line 145, ../../app/stylesheets/screen.scss */
+/* line 146, ../../app/stylesheets/screen.scss */
 #content-container .title-header, #content-container .link-header {
   height: 40px;
 }
-/* line 146, ../../app/stylesheets/screen.scss */
+/* line 147, ../../app/stylesheets/screen.scss */
 #content-container .title-header a, #content-container .title-header h3, #content-container .link-header a, #content-container .link-header h3 {
   text-decoration: none;
   font-weight: normal;
   line-height: 40px;
-  padding-left: 20px;
   margin: 0;
 }
 /* line 147, ../../app/stylesheets/screen.scss */
+#content-container .title-header h3, #content-container .link-header h3 {
+  padding-left: 20px;
+}
+/* line 148, ../../app/stylesheets/screen.scss */
 #content-container .title-header {
   font-weight: normal;
   color: white;
   background: #27282b;
 }
-/* line 149, ../../app/stylesheets/screen.scss */
+/* line 150, ../../app/stylesheets/screen.scss */
 #content-container .link-header {
-  text-alignment: center;
+  text-align: center;
   font-weight: normal;
   color: white;
   background: black;
 }
-/* line 153, ../../app/stylesheets/screen.scss */
-#content-container .section-content {
-  padding-right: 10px;
+/* line 151, ../../app/stylesheets/screen.scss */
+#content-container .link-header span {
+  font-size: 120%;
+  line-height: 40px;
+}
+/* line 152, ../../app/stylesheets/screen.scss */
+#content-container #content-container.budget .link-header {
+  text-align: right;
 }
 /* line 156, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol {
-  padding-left: 10px;
-  padding-top: 20px;
-  list-style-type: decimal;
-  margin-left: 35px;
+  list-style-type: none;
+}
+/* line 158, ../../app/stylesheets/screen.scss */
+#content-container .section-content ol .even {
+  background: #ddd;
+}
+/* line 159, ../../app/stylesheets/screen.scss */
+#content-container .section-content ol li {
+  border-bottom: solid 1px #eee;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 20px 0;
 }
 /* line 160, ../../app/stylesheets/screen.scss */
-#content-container .section-content ol li {
-  padding: 0;
-  font-size: 150%;
-  border-bottom: solid 1px #eee;
-}
-/* line 162, ../../app/stylesheets/screen.scss */
-#content-container .section-content ol li p, #content-container .section-content ol li a {
-  font-size: 70%;
-}
-/* line 164, ../../app/stylesheets/screen.scss */
-#content-container .section-content ol li {
-  padding: 0px 20px;
-}
-/* line 165, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a {
   color: black;
+  padding: 0 20px;
+  display: block;
 }
-/* line 165, ../../app/stylesheets/screen.scss */
+/* line 160, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a:hover {
   color: red;
 }
-
+/* line 161, ../../app/stylesheets/screen.scss */
+#content-container .section-content ol li p {
+  text-align: right;
+  padding: 0 20px;
+}
+/* line 164, ../../app/stylesheets/screen.scss */
+#content-container .programs li, #content-container .projects li {
+  list-style-type: none;
+}
+/* line 175, ../../app/stylesheets/screen.scss */
+#content-container .programs .title {
+  font-weight: bold;
+}
 /* line 176, ../../app/stylesheets/screen.scss */
+#content-container .programs .budget {
+  font-weight: bold;
+}
+/* line 177, ../../app/stylesheets/screen.scss */
+#content-container .programs .budget {
+  text-align: right;
+}
+/* line 178, ../../app/stylesheets/screen.scss */
+#content-container .programs li {
+  padding: 10px 0;
+}
+/* line 180, ../../app/stylesheets/screen.scss */
+#content-container .programs li .title span {
+  padding-left: 20px;
+}
+/* line 181, ../../app/stylesheets/screen.scss */
+#content-container .programs li .budget span {
+  padding-right: 20px;
+}
+/* line 182, ../../app/stylesheets/screen.scss */
+#content-container .programs li ul li {
+  border: none;
+}
+/* line 185, ../../app/stylesheets/screen.scss */
+#content-container .programs .projects .title, #content-container .programs .projects .budget {
+  border: none;
+  font-weight: normal;
+}
+/* line 185, ../../app/stylesheets/screen.scss */
+#content-container .programs .projects .even {
+  background: #eee;
+}
+
+/* line 191, ../../app/stylesheets/screen.scss */
 #footer {
   color: white;
   padding: 20px 0;
 }
-/* line 179, ../../app/stylesheets/screen.scss */
+/* line 194, ../../app/stylesheets/screen.scss */
 #footer a {
   color: white;
 }
-/* line 179, ../../app/stylesheets/screen.scss */
+/* line 194, ../../app/stylesheets/screen.scss */
 #footer a:hover {
   color: red;
 }
