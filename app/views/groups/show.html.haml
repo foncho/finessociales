@@ -7,8 +7,7 @@
   - resource.years.each do |year|
     .info-container
       %h1= resource.name
-      %span= year.year.next
-      %span= "Total: #{number_to_currency(resource.budget_for_year(year), :unit => '€', :format => '%n %u')}"
+      %h2= "Total en #{year.year.next} : #{number_to_currency(resource.budget_for_year(year), :unit => '€', :format => '%n %u')}"
       #targets
         - resource.targets.of_year(year).each do |target|
           .section

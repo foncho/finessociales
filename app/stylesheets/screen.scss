@@ -44,7 +44,8 @@ body{
 }
 
 #search{
-  h3{@include column(3);}
+
+  h3{@include column(3);@include prepend(3);}
   input{@include column(8);}
 }
 
