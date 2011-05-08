@@ -4,9 +4,18 @@
     %input
     %button Buscar
 #content-container
-  %h2 Organizaciones 2011
-  %ul.organizations
+  %h2 Organizaciones y finanaciación recibida por año
+  %table.organizations
+    %tr.header
+      %th CIF
+      %th Entidad
+      - Year.all.reverse.each do |y|
+        %th= y.year
+      %th Total
     - collection.each do |organization|
-      %li
-        %span= organization.cif
-        =link_to(organization.name,organization)
+      %tr
+        %td= organization.cif
+        %td=link_to(organization.name,organization)
+        - Year.all.reverse.each do |y|
+          %td= number_to_currency(organization.budget_for_year(y), :unit => '€', :format => '%n %u')
+        %td= number_to_currency(organization.budget, :unit => '€', :format => '%n %u')

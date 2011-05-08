@@ -66,15 +66,24 @@ namespace :data do
       end
       # Organization budgets
       Organization.all.each do |organization|
-        total = 0
-        organization.projects.of_year(year).each do |project|
-          total += project.budget
+        year_total = organization.projects.of_year(year).inject(0) do |year_sum, project|
+          year_sum += project.budget
+          year_sum
         end
-        OrganizationBudget.create(:organization => organization, :year => year, :budget => total)
+        OrganizationBudget.create(:organization => organization, :year => year, :budget => year_total)
       end
       # Year totals
       year.update_attributes(:total_projects => Project.where(:year_id => year.to_param).count)
       year.update_attributes(:total_organizations => Organization.of_year(year).count)
+    end
+
+    # Cumulate organization budgets
+    Organization.all.each do |org|
+      total_budget = org.organization_budgets.inject(0) do |res, org_budget|
+        res += org_budget.budget
+        res
+      end
+      org.update_attribute(:budget, total_budget)
     end
   end
 

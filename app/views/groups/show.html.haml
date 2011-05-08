@@ -2,14 +2,14 @@
   #group
     %span= resource.name
     %span= year
-    %span= "Total: #{resource.budget(year)}"
+    %span= "Total: #{resource.budget_for_year(year)}"
 
     #targets
       %ul.targets
       - resource.targets.of_year(year).each do |target|
         %li
           %span= target.name
-          %span= target.budget(year)
+          %span= target.budget_for_year(year)
           #projects
             %ul.projects
             - target.projects.of_year(year).each do |project|

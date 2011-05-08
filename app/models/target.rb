@@ -17,7 +17,7 @@ class Target < ActiveRecord::Base
     total
   end
 
-  def budget(year)
+  def budget_for_year(year)
     target_budgets.empty? ? 0.0 : target_budgets.where(:year_id => year.to_param).first.budget
   end
 

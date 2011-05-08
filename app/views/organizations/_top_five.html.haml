@@ -9,4 +9,4 @@
         .title.short
           = link_to organization.try(:name), organization
         .budget
-          %p= number_to_currency(organization.budget(year), :unit => '€', :format => '%n %u')
+          %p= number_to_currency(organization.budget_for_year(year), :unit => '€', :format => '%n %u')

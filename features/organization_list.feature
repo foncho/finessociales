@@ -5,9 +5,16 @@ Feature: Organization List
 
   Scenario: List
     Given a organization exists with cif: "G-12345678", name: "Wadus Red Cross"
+        And the organization "Wadus Red Cross" has following budget data:
+           | year  | budget |
+           | 2010  | 1000   |
+           | 2011  | 2000   |
+           | Total | 3000   |
        When I go to the organizations page
        Then I should see "G-12345678"
-        And I should see "Wadus Red Cross"
+        And I should see the following organizations list
+           | CIF        | Entidad         | 2011       | 2010       | Total      |
+           | G-12345678 | Wadus Red Cross | 2,000.00 € | 1,000.00 € | 3,000.00 € |
 
   Scenario: Go to the organizations page
       Given a year exists

@@ -18,8 +18,8 @@ class Organization < ActiveRecord::Base
     where("organization_budgets.year_id == ?", year.to_param).order("organization_budgets.budget DESC").limit(limit)
   }
 
-  def budget(year)
-    organization_budgets.empty? ? 0.0 : organization_budgets.where(:year_id => year.to_param).first.budget
+  def budget_for_year(year)
+    organization_budgets.where(:year_id => year.to_param).empty? ? 0.0 : organization_budgets.where(:year_id => year.to_param).first.budget
   end
 
 end

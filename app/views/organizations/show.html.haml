@@ -4,16 +4,28 @@
     %input
     %button Buscar
 #content-container.budget
-  - resource.years.each do |year|
-    .info-container
+  .info-container
 
-    %h1= resource.name
-    %h2 Informacion disponible
-    %span= resource.cif
-    %span= resource.name
-    %span= year.year
-    %span= "Total:" + number_to_currency(resource.budget(year), :unit => '€', :format => '%n %u')
-    %h2 Proyectos sociales en el 2011
+  %h1= resource.name
+  %h2 Información disponible
+
+  %table.organizations
+    %tr.header
+      %th CIF
+      %th Entidad
+      - Year.all.reverse.each do |y|
+        %th= y.year
+      %th Total
+    %tr
+      %td= resource.cif
+      %td= resource.name
+      - Year.all.reverse.each do |y|
+        %td= number_to_currency(resource.budget_for_year(y), :unit => '€', :format => '%n %u')
+      %td= number_to_currency(resource.budget, :unit => '€', :format => '%n %u')
+
+  - resource.years.reverse.each do |year|
+
+    %h2= "Proyectos financiados en #{year.year}"
     - Group.attended_by_organization(resource, year).each do |group|
       .section
         .title-header

@@ -18,7 +18,7 @@ class Group < ActiveRecord::Base
     total
   end
 
-  def budget(year)
+  def budget_for_year(year)
     group_budgets.empty? ? 0.0 : group_budgets.where(:year_id => year.to_param).first.budget
   end
 
