@@ -10,7 +10,7 @@
       %th CIF
       %th Entidad
       - Year.all.reverse.each do |y|
-        %th= y.year
+        %th= y.year.next
       %th Total
     - collection.each do |organization|
       %tr{ :class => cycle('odd', 'even')}

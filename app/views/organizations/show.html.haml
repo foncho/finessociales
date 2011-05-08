@@ -14,7 +14,7 @@
       %th CIF
       %th Entidad
       - Year.all.reverse.each do |y|
-        %th= y.year
+        %th= y.year.next
       %th Total
     %tr
       %td= resource.cif
@@ -25,7 +25,7 @@
 
   - resource.years.reverse.each do |year|
 
-    %h2= "Proyectos financiados en #{year.year}"
+    %h2= "Proyectos financiados en #{year.year.next}"
     - Group.attended_by_organization(resource, year).each do |group|
       .section
         .title-header
