@@ -218,6 +218,7 @@ DEPENDENCIES
   launchy
   meta_search
   mynyml-redgreen
+  nokogiri
   pickle (~> 0.4.2)
   rack-canonical-host (~> 0.0.3)
   rails (= 3.0.7)

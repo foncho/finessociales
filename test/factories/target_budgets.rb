@@ -4,4 +4,5 @@ Factory.define :target_budget do |f|
   f.year_id nil
   f.target_id nil
   f.budget 10000
+  f.description "Target description"
 end

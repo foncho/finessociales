@@ -43,6 +43,46 @@ namespace :data do
     end
   end
 
+  desc "Parse and import CSV target descriptions data"
+  task :import_descriptions => :environment do
+    require 'csv'
+
+    Dir['data/*_descriptions.csv'].each do |file|
+      year_number = File.basename(file, '.csv').split('_').first
+      year = Year.find_by_year(year_number)
+      if year
+        # maybe we should use a DB transaction here but we enjoy living on the edge, don't you?
+
+        # new data set
+        puts "Importando el año #{year_number}."
+
+        CSV.foreach(file, :headers => true) do |row|
+          hash = row.to_hash
+
+          group = Group.find_by_name(hash['COLECTIVO'].strip)
+          puts "COLECTIVO #{hash['COLECTIVO']} no encontrado" if group.nil?
+
+          if group.present?
+            target = Target.find_by_name_and_group_id(hash['PROGRAMA'].upcase.strip, group.id)
+            puts "TARGET '#{hash['COLECTIVO']} =======> #{hash['PROGRAMA']}' no encontrado" if target.nil?
+
+            if target.present?
+              budget = TargetBudget.find_by_target_id_and_year_id(target.id, year.id)
+              if budget.present?
+                budget.update_attributes :description => hash['DESCRIPCION']
+              end
+            end
+          end
+        end
+      else
+        # data set for this year doesn't already present, skip
+      end
+    end
+  end
+
+
+
+
   desc "Recalculate the budget information"
   task :recalculate => :environment do
     # The only budgets extract from the data are the projects budgets
@@ -85,6 +125,65 @@ namespace :data do
       end
       org.update_attribute(:budget, total_budget)
     end
+  end
+
+  desc "Get target descriptions from boe (year 2010)"
+  task :get_targets_description do
+    doc = Nokogiri::HTML(open('http://boe.es/aeboe/consultas/bases_datos/doc.php?id=BOE-A-2010-9328'))
+    page_element = doc.xpath("//p[@class='anexo_tit']").first
+
+    general_explanation = ""
+
+    # Get general explanation
+    begin
+      general_explanation << "<p>#{page_element.text}</p>" if page_element.values.include? 'parrafo'
+      page_element = page_element.next
+    end until page_element.values.include? 'centro_cursiva'
+    page_element = page_element.next unless page_element.nil?
+    
+    # Get groups info
+    groups = []
+    begin
+      # get group
+      group = {}
+      group[:targets] = []
+      
+      # Find groups section
+      unless page_element.values.include? 'centro_redonda'
+        page_element = page_element.next until page_element.nil? or page_element.values.include? 'centro_redonda' or page_element.values.include? 'centro_cursiva'
+      end
+
+      if !page_element.nil? and !page_element.values.include? 'centro_cursiva'
+        group[:name] = page_element.text.split(' ')[1..-1].join(' ')
+
+        begin
+          target = {}
+          if page_element.text =~ /^\d+.\d+ /
+            text = page_element.text.split('.–')
+            target[:name] = text.first.split(' ')[1..-1].join(' ')
+            target[:description] = ""
+            text[1..-1].each { |t| target[:description] << "<p>#{t}</p>" }
+
+            begin
+              page_element = page_element.next unless page_element.nil?
+              target[:description] << "<p>#{page_element.text}</p>" if page_element.values.include? 'parrafo' or page_element.values.include? 'parrafo_2'
+            end until page_element.nil? or page_element.text =~ /^\d+.\d+ / or page_element.values.include? 'centro_redonda' or page_element.values.include? 'centro_cursiva'
+            
+            group[:targets] << target
+          end
+
+          page_element = page_element.next if !page_element.nil? and target.empty?
+        end until page_element.nil? or page_element.values.include? 'centro_redonda' or page_element.values.include? 'centro_cursiva'
+
+        groups << group
+      end
+    end until page_element.nil? or page_element.values.include? 'centro_cursiva'
+
+    # Get all targets requirements
+    # TODO
+
+    File.open('data/2010_descriptions.csv', 'w+') { |f| groups.each { |g| g[:targets].each { |t| f << "#{g[:name]}\t#{t[:name]}\t#{t[:description]}\n" } } }
+
   end
 
 end
