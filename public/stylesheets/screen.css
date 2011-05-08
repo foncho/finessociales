@@ -855,6 +855,7 @@ table .header {
 /* line 194, ../../app/stylesheets/screen.scss */
 .programs li .title span {
   padding-left: 20px;
+  display: block;
 }
 /* line 195, ../../app/stylesheets/screen.scss */
 .programs li .budget span {
