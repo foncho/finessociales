@@ -1,18 +1,26 @@
-- resource.years.each do |year|
-  #group
-    %span= resource.name
-    %span= year
-    %span= "Total: #{resource.budget_for_year(year)}"
-
-    #targets
-      %ul.targets
-      - resource.targets.of_year(year).each do |target|
-        %li
-          %span= target.name
-          %span= target.budget_for_year(year)
-          #projects
-            %ul.projects
-            - target.projects.of_year(year).each do |project|
-              %li
-                %span= project.title
-                %span= project.budget
+#search-frame
+  #search
+    %h3 Busca
+    %input
+    %button Buscar
+#content-container.budget
+  - resource.years.each do |year|
+    .info-container
+      %h1= resource.name
+      %span= year.year
+      %span= "Total: #{resource.budget(year)}"
+      #targets
+        - resource.targets.of_year(year).each do |target|
+          .section
+            .title-header
+              %p= target.name
+            .link-header
+              %span= number_to_currency(target.budget(year), :unit => '€', :format => '%n %u')
+            .section-content
+              %ul.projects
+                - target.projects.of_year(year).each do |project|
+                  %li{ :class => cycle('odd', 'even')}
+                    .title
+                      = link_to(project.title,project.organization)
+                    .budget
+                      %span= number_to_currency(project.budget, :unit => '€', :format => '%n %u')

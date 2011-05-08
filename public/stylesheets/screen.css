@@ -731,14 +731,14 @@ body dd {
   *zoom: 1;
 }
 /* line 148, ../../app/stylesheets/screen.scss */
-#content-container .title-header a, #content-container .title-header h3, #content-container .link-header a, #content-container .link-header h3 {
+#content-container .title-header a, #content-container .title-header h3, #content-container .title-header p, #content-container .link-header a, #content-container .link-header h3, #content-container .link-header p {
   text-decoration: none;
   font-weight: normal;
   line-height: 40px;
   margin: 0;
 }
 /* line 148, ../../app/stylesheets/screen.scss */
-#content-container .title-header h3, #content-container .link-header h3 {
+#content-container .title-header h3, #content-container .title-header p, #content-container .link-header h3, #content-container .link-header p {
   padding-left: 20px;
 }
 /* line 149, ../../app/stylesheets/screen.scss */
@@ -747,113 +747,143 @@ body dd {
   color: white;
   background: #27282b;
 }
-/* line 151, ../../app/stylesheets/screen.scss */
+/* line 150, ../../app/stylesheets/screen.scss */
 #content-container .link-header {
   text-align: center;
   font-weight: normal;
   color: white;
   background: black;
 }
-/* line 156, ../../app/stylesheets/screen.scss */
+/* line 155, ../../app/stylesheets/screen.scss */
 #content-container .link-header:hover {
   background: red;
 }
-/* line 158, ../../app/stylesheets/screen.scss */
+/* line 157, ../../app/stylesheets/screen.scss */
 #content-container .link-header a {
   display: block;
   color: white;
 }
-/* line 159, ../../app/stylesheets/screen.scss */
+/* line 158, ../../app/stylesheets/screen.scss */
 #content-container .link-header span {
   font-size: 120%;
   line-height: 40px;
 }
-/* line 160, ../../app/stylesheets/screen.scss */
+/* line 159, ../../app/stylesheets/screen.scss */
 #content-container #content-container.budget .link-header {
   text-align: right;
 }
-/* line 164, ../../app/stylesheets/screen.scss */
+/* line 163, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol {
   list-style-type: none;
 }
-/* line 166, ../../app/stylesheets/screen.scss */
+/* line 165, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol .even {
   background: #ddd;
 }
-/* line 167, ../../app/stylesheets/screen.scss */
+/* line 166, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li {
   border-bottom: solid 1px #eee;
   overflow: hidden;
   *zoom: 1;
   padding: 20px 0;
 }
-/* line 168, ../../app/stylesheets/screen.scss */
+/* line 167, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a {
   color: black;
   padding: 0 20px;
   display: block;
 }
-/* line 168, ../../app/stylesheets/screen.scss */
+/* line 167, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li a:hover {
   color: red;
 }
-/* line 169, ../../app/stylesheets/screen.scss */
+/* line 168, ../../app/stylesheets/screen.scss */
 #content-container .section-content ol li p {
   text-align: right;
   padding: 0 20px;
 }
-/* line 172, ../../app/stylesheets/screen.scss */
+/* line 171, ../../app/stylesheets/screen.scss */
 #content-container .programs li, #content-container .projects li {
   list-style-type: none;
 }
+
+/* line 182, ../../app/stylesheets/screen.scss */
+.programs .title {
+  font-weight: bold;
+}
 /* line 183, ../../app/stylesheets/screen.scss */
-#content-container .programs .title {
+.programs .budget {
   font-weight: bold;
 }
 /* line 184, ../../app/stylesheets/screen.scss */
-#content-container .programs .budget {
-  font-weight: bold;
-}
-/* line 185, ../../app/stylesheets/screen.scss */
-#content-container .programs .budget {
+.programs .budget {
   text-align: right;
 }
-/* line 186, ../../app/stylesheets/screen.scss */
-#content-container .programs li {
+/* line 185, ../../app/stylesheets/screen.scss */
+.programs li {
   padding: 10px 0;
 }
-/* line 188, ../../app/stylesheets/screen.scss */
-#content-container .programs li .title span {
+/* line 187, ../../app/stylesheets/screen.scss */
+.programs li .title span {
   padding-left: 20px;
 }
-/* line 189, ../../app/stylesheets/screen.scss */
-#content-container .programs li .budget span {
+/* line 188, ../../app/stylesheets/screen.scss */
+.programs li .budget span {
   padding-right: 20px;
 }
-/* line 190, ../../app/stylesheets/screen.scss */
-#content-container .programs li ul li {
+/* line 189, ../../app/stylesheets/screen.scss */
+.programs li ul li {
   border: none;
 }
-/* line 193, ../../app/stylesheets/screen.scss */
-#content-container .programs .projects .title, #content-container .programs .projects .budget {
+/* line 192, ../../app/stylesheets/screen.scss */
+.programs .projects .title, .programs .projects .budget {
   border: none;
   font-weight: normal;
 }
-/* line 193, ../../app/stylesheets/screen.scss */
-#content-container .programs .projects .even {
+/* line 192, ../../app/stylesheets/screen.scss */
+.programs .projects .even {
   background: #eee;
 }
 
+/* line 195, ../../app/stylesheets/screen.scss */
+.section-content .projects .budget {
+  text-align: right;
+}
+/* line 196, ../../app/stylesheets/screen.scss */
+.section-content .projects li {
+  padding: 10px 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 197, ../../app/stylesheets/screen.scss */
+.section-content .projects .title p, .section-content .projects span, .section-content .projects a {
+  padding-left: 20px;
+  display: block;
+  color: black;
+}
+/* line 198, ../../app/stylesheets/screen.scss */
+.section-content .projects .title a:hover {
+  color: red;
+}
 /* line 199, ../../app/stylesheets/screen.scss */
+.section-content .projects .budget span {
+  padding-right: 20px;
+}
+/* line 200, ../../app/stylesheets/screen.scss */
+.section-content .projects .even {
+  background: #eee;
+}
+
+/* line 204, ../../app/stylesheets/screen.scss */
 #footer {
   color: white;
   padding: 20px 0;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 207, ../../app/stylesheets/screen.scss */
 #footer a {
   color: white;
 }
-/* line 202, ../../app/stylesheets/screen.scss */
+/* line 207, ../../app/stylesheets/screen.scss */
 #footer a:hover {
   color: red;
 }
