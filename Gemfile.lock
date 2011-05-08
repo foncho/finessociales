@@ -129,6 +129,7 @@ GEM
     mynyml-redgreen (0.7.1)
       term-ansicolor (>= 1.0.4)
     nokogiri (1.4.4)
+    pg (0.10.1)
     pickle (0.4.7)
       cucumber (>= 0.8)
       rake
@@ -219,6 +220,7 @@ DEPENDENCIES
   meta_search
   mynyml-redgreen
   nokogiri
+  pg
   pickle (~> 0.4.2)
   rack-canonical-host (~> 0.0.3)
   rails (= 3.0.7)

@@ -10,19 +10,19 @@ class Organization < ActiveRecord::Base
 
   scope :of_year, lambda { |year|
     joins(:organization_budgets).
-    where("organization_budgets.year_id == ?", year.to_param).uniq
+    where("organization_budgets.year_id = ?", year.id).uniq
   }
 
   scope :top_by_year, lambda { |year, limit|
     joins(:organization_budgets).
-    where("organization_budgets.year_id == ?", year.to_param).order("organization_budgets.budget DESC").limit(limit)
+    where("organization_budgets.year_id = ?", year.id).order("organization_budgets.budget DESC").limit(limit)
   }
 
   # friendly-ids
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50, :ascii_approximation_options => :spanish
 
   def budget_for_year(year)
-    organization_budgets.where(:year_id => year.to_param).empty? ? 0.0 : organization_budgets.where(:year_id => year.to_param).first.budget
+    organization_budgets.where(:year_id => year.id).empty? ? 0.0 : organization_budgets.where(:year_id => year.id).first.budget
   end
 
 end

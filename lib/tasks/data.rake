@@ -113,7 +113,7 @@ namespace :data do
         OrganizationBudget.create(:organization => organization, :year => year, :budget => year_total)
       end
       # Year totals
-      year.update_attributes(:total_projects => Project.where(:year_id => year.to_param).count)
+      year.update_attributes(:total_projects => Project.where(:year_id => year.id).count)
       year.update_attributes(:total_organizations => Organization.of_year(year).count)
     end
 

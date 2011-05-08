@@ -10,15 +10,15 @@ class Project < ActiveRecord::Base
   validates_associated :organization, :year
 
   scope :target_is, lambda { |target|
-    where("target_id == ?", target.id)
+    where(:target_id => target.id)
   }
 
   scope :of_organization, lambda { |organization|
-    where("organization_id == ?", organization.id)
+    where(:organization_id => organization.id)
   }
 
   scope :of_year, lambda { |year|
-    where("year_id == ?", year.id)
+    where(:year_id => year.id)
   }
 
   scope :top_by_year, lambda { |year, limit|
@@ -26,6 +26,6 @@ class Project < ActiveRecord::Base
   }
 
   # friendly-ids
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+  has_friendly_id :title, :use_slug => true, :approximate_ascii => true, :max_length => 50, :ascii_approximation_options => :spanish
 
 end

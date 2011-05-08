@@ -29,6 +29,8 @@ gem 'nokogiri'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+gem "pg"
 gem "kaminari"
 gem "haml-rails", ">= 0.2"
 gem "compass", ">= 0.10.5"

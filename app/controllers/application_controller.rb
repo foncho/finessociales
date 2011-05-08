@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 
   protected
   def ensure_current_url
-    redirect_to resource, :status => :moved_permanently unless resource.friendly_id_status.best?
+    redirect_to resource, :status => :moved_permanently unless resource.friendly_id_status.best? || resource.nil?
   end
 end

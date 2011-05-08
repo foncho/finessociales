@@ -10,7 +10,7 @@ class Year < ActiveRecord::Base
   default_scope :order => 'year ASC'
 
   # friendly-ids
-  has_friendly_id :name, :use_slug => true, :approximate_ascii => true, :max_length => 50
+  has_friendly_id :year, :use_slug => true, :approximate_ascii => true, :max_length => 50, :ascii_approximation_options => :spanish
 
   def check_percentages
     total_percentage = social_percentage + foreing_percentage + environmental_percentage
