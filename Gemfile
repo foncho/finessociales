@@ -57,5 +57,7 @@ gem "rails3-generators", :group => :development
 gem "heroku"
 gem "ruby-debug19", :require => "ruby-debug", :group => [:development, :test]
 
+gem "translate_routes"
+
 # Rack, do some fancy stuff before the requests hit Rails
 gem 'rack-canonical-host', '~> 0.0.3' # Redirect to finessociales.es if accessing through other subdomain like www.
