@@ -4,8 +4,14 @@
     %input
     %button Buscar
 #content-container
-  %h2 Colectivos ¿2011?
-  %ul.groups
+  %h2= "Colectivos por año"
+  %table.groups
+    %tr.header
+      %th Colectivo
+      - Year.all.reverse.each do |y|
+        %th= y.year.next
     - collection.each do |group|
-      %li
-        = link_to group.name, group
+      %tr{ :class => cycle('odd', 'even')}
+        %td= link_to(group.name, group)
+        - Year.all.reverse.each do |y|
+          %td= number_to_currency(group.budget_for_year(y), :unit => '€', :format => '%n %u')
