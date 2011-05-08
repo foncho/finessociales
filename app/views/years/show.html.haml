@@ -24,14 +24,13 @@
     %input
     %button Buscar
 #content-container
-  /FIXME: year + 1 WTF?
   %h2== Proyectos sociales #{@year.year + 1}
   .section
     .title-header
       %h3 Colectivos
     .link-header
       = link_to 'Ir a colectivos', groups_path
-    .section-content
+    #graph-container
       #group-graph
   .section.left
     = render 'organizations/top_five', :year => @year
