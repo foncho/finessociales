@@ -104,7 +104,7 @@ body{
 
 #info{
   padding:20px 0;
-  a{}
+  p a{color:$fs-dark-color; &:hover{color:$fs-light-color;}}
   hr{border: none 0;height: 1px; border-bottom: dashed 1px $fs-dark-color;margin-right:20px;}
   color:white;
   h2{
@@ -112,7 +112,7 @@ body{
     font-size:2.8em;
     margin: 0;
     text-align:center;
-    a{text-decoration:none;color:$fs-dark-color;;
+    a{text-decoration:none;color:$fs-dark-color;
       border-bottom:1px solid $fs-dark-color;
       &:hover{color:$fs-light-color;border-bottom:1px solid $fs-light-color ;};;}}
   h3{font-size:3.6em;text-align:center;margin:0;text-align:center;}

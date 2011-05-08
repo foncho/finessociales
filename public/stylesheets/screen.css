@@ -529,6 +529,14 @@ body dd {
   padding: 20px 0;
   color: white;
 }
+/* line 107, ../../app/stylesheets/screen.scss */
+#info p a {
+  color: #376b6b;
+}
+/* line 107, ../../app/stylesheets/screen.scss */
+#info p a:hover {
+  color: #73dada;
+}
 /* line 108, ../../app/stylesheets/screen.scss */
 #info hr {
   border: none 0;
