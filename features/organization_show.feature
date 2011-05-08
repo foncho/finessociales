@@ -55,3 +55,17 @@ Feature: Organization Show
       And I should see "10000"
       And I should see "Proyecto 4"
       And I should see "10000"
+
+  Scenario: Go to the organization page
+      Given a organization exists with name: "Cruz Roja Española", cif: "G-9999995"
+        And I am on the organizations page
+       When I follow "Cruz Roja Española"
+       Then I should be on the organization page with cif "G-9999995"
+
+  Scenario: Go to the organization page from the homepage (top5)
+      Given a year "year" exists
+        And a organization "org" exists with name: "Cruz Roja Española", cif: "G-9999995"
+        And a organization budget exists with year: year "year", organization: organization "org", budget: "500000"
+        And I am on the homepage
+       When I follow "Cruz Roja Española"
+       Then I should be on the organization page with cif "G-9999995"

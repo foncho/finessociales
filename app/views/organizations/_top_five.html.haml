@@ -1,7 +1,7 @@
 .title-header
   %h3 Top entidades
 .link-header
-  %a Ir a entidades
+  = link_to 'Ir a entidades', organizations_path
 .section-content
   %ol
     - Organization.top_by_year(year, 5).each do |organization|
