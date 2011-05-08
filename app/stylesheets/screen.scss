@@ -35,7 +35,7 @@ body{
 #info{
   .section {@include column(6);@include last;}
   .section.double {@include column(12);@include last;}
-  .left,.right{@include column(6);@include last;}
+  .left,.right{@include column(6);}
 }
 
 #search{
@@ -44,18 +44,24 @@ body{
 }
 
 #content-container{
-    .section{@include column(24);@include last;
-    .info-container{@include column(24);}
-    .section-content{@include column(23);padding-right:34px;}
-    //title + link = 24
-    .title-header{@include column(20);}
-    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
+    .section{
+      @include container;
+      .info-container{@include column(24);}
+      .section-content{@include column(24);}
+      //title + link = 24
+      .title-header{@include column(20);}
+      .link-header{@include column(4);@include clearfix;@include last}
+      }
 
-    .section.left{padding-right:90px;}
-    .section.left,.section.right {@include column(11);@include last;
-    .section-content{@include column(10);}
-    .title-header{@include column(7);}
-    .link-header{@include column(4);@include last;@include clearfix;a{@include clearfix;}}}
+
+    .section.left,.section.right {
+      @include column(11);
+      .section-content{@include column(11);}
+      .title-header{@include column(7);}
+      .link-header{@include column(4);@include last;}
+      }
+      .section.left{@include append(2);}
+      .section.right{@include last;}
 
   }
 
@@ -140,13 +146,24 @@ body{
   .title-header,.link-header{a,h3{text-decoration:none;font-weight:normal;line-height:40px;padding-left:20px;margin:0;}}
   .title-header{font-weight:normal;color:white;background:$footer-color;
   }
-  .link-header{text-alignment:center;font-weight:normal;color:white;background:black;margin-left:-8px;
+  .link-header{text-alignment:center;font-weight:normal;color:white;background:black;
   }
 
   //content of the section
   .section-content{
     padding-right:10px;
-    background: url("/images/section_back.png") 50% 50% repeat;
+
+    ol{
+      padding-left:10px;
+      padding-top:20px;
+      list-style-type:decimal;
+      li{padding:0;font-size:150%;border-bottom: solid 1px #eee;
+
+      p,a{font-size:70%;}}
+      margin-left:35px;
+      li{padding:0px 20px;
+        a{color:black;&:hover{color:red;}}}
+    }
   }
   //info-container
   .info-container{

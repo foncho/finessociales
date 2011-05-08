@@ -1,10 +1,10 @@
 .title-header
-  %h3 Entidades
+  %h3 Top entidades
 .link-header
   %a Ir a entidades
 .section-content
   %ol
     - Organization.top_by_year(year, 5).each do |organization|
-      %li
+      %li{ :class => cycle('odd', 'even')}
         = link_to organization.try(:name), organization
         %p.budget= number_to_currency(organization.budget(year), :unit => 'euros', :format => '%n %u')
