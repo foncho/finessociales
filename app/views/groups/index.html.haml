@@ -1,0 +1,11 @@
+#search-frame
+  #search
+    %h3 Busca
+    %input
+    %button Buscar
+#content-container
+  %h2 Colectivos ¿2011?
+  %ul.groups
+    - collection.each do |group|
+      %li
+        = link_to group.name, group

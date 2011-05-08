@@ -43,3 +43,10 @@ Feature: Group Show
       And I should see "10000"
       And I should see "Proyecto 4"
       And I should see "10000"
+
+  Scenario: Go to the group page
+      Given a group exists with name: "Juventud"
+        And I am on the groups page
+       When I follow "Juventud"
+       Then I should be on the group page with name "Juventud"
+

@@ -1,7 +1,7 @@
 Finessociales::Application.routes.draw do
   resources :years, :only => [:show]
   resources :organizations, :only => [:index, :show]
-  resources :groups, :only => [:show]
+  resources :groups, :only => [:index, :show]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
