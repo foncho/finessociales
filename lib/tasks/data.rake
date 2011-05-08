@@ -26,10 +26,10 @@ namespace :data do
 
         # new data set
         puts "Importando el año #{year_number}."
-        total_budget = ask("¿Cuál ha sido el importe total recaudado en millones a través del 0,7% de IRPF? (p.ej. 264365673.21 para 2010): ")
-        social_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos sociales? (si fue 78,2% introduce 78.2): ")
-        foreing_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos de cooperación en paises de desarrollo? (si fue 19,3% introduce 19.3): ")
-        environmental_percentage = ask("¿Cuál ha sido el porcentaje destinado a proyectos de medioambiente? (si fue 2,5% introduce 2.5): ")
+        total_budget = ENV['TOTAL_BUDGET'] || ask("¿Cuál ha sido el importe total recaudado en millones a través del 0,7% de IRPF? (p.ej. 264365673.21 para 2010): ")
+        social_percentage = ENV['SOCIAL'] || ask("¿Cuál ha sido el porcentaje destinado a proyectos sociales? (si fue 78,2% introduce 78.2): ")
+        foreing_percentage = ENV['FOREIGN'] || ask("¿Cuál ha sido el porcentaje destinado a proyectos de cooperación en paises de desarrollo? (si fue 19,3% introduce 19.3): ")
+        environmental_percentage = ENV['ENVIRONMENT'] || ask("¿Cuál ha sido el porcentaje destinado a proyectos de medioambiente? (si fue 2,5% introduce 2.5): ")
 
         year = Year.create!(:year => year_number, :budget => total_budget, :social_percentage => social_percentage, :foreing_percentage => foreing_percentage, :environmental_percentage => environmental_percentage)
         CSV.foreach(file, :headers => true) do |row|
@@ -140,14 +140,14 @@ namespace :data do
       page_element = page_element.next
     end until page_element.values.include? 'centro_cursiva'
     page_element = page_element.next unless page_element.nil?
-    
+
     # Get groups info
     groups = []
     begin
       # get group
       group = {}
       group[:targets] = []
-      
+
       # Find groups section
       unless page_element.values.include? 'centro_redonda'
         page_element = page_element.next until page_element.nil? or page_element.values.include? 'centro_redonda' or page_element.values.include? 'centro_cursiva'
@@ -168,7 +168,7 @@ namespace :data do
               page_element = page_element.next unless page_element.nil?
               target[:description] << "<p>#{page_element.text}</p>" if page_element.values.include? 'parrafo' or page_element.values.include? 'parrafo_2'
             end until page_element.nil? or page_element.text =~ /^\d+.\d+ / or page_element.values.include? 'centro_redonda' or page_element.values.include? 'centro_cursiva'
-            
+
             group[:targets] << target
           end
 
