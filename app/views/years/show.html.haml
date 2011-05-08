@@ -9,7 +9,9 @@
         %h3= "#{(resource.social_budget/1000000).round} m. €"
         %h4 Proyectos sociales
       .right
-        %p El Ministerio de Sanidad y Política social distribuye este dinero, que cada año se adjudica y se publica en el BOE. Más información aquí.
+        %p
+          El Ministerio de Sanidad y Política social distribuye este dinero mediante una convocatoria pública, que cada año se adjudica y se publica en el BOE. Más información 
+          = link_to 'aquí', about_path
     .section#section-foreing
       %h2= "#{resource.foreing_percentage.round}%"
       %h3= "#{(resource.foreing_budget/1000000).round} m. €"
