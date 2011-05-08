@@ -5,6 +5,7 @@ class Year < ActiveRecord::Base
 
   validates_presence_of :year, :budget, :social_percentage, :foreing_percentage, :environmental_percentage
   validate :check_percentages
+  validate_uniqueness_of :year
 
   default_scope :order => 'year ASC'
 
