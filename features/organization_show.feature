@@ -32,7 +32,7 @@ Feature: Organization Show
      When I go to the organization page with cif "G-12345678"
      # Organization information
      Then I should see the following organizations list
-         | CIF        | Entidad         | 2011       | 2010       | Total      |
+         | CIF        | Entidad         | 2012       | 2011       | Total      |
          | G-12345678 | Wadus Red Cross | 2.000,00 € | 1.000,00 € | 3.000,00 € |
 
      # # First group

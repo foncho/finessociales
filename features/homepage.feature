@@ -9,7 +9,8 @@ Feature: Homepage
   Scenario: Homepage
     Given a year exists with year: 2009
      When I go to the homepage
-     Then I should see "260 millones de euros"
+     Then show me the page
+     Then I should see "100 millones de euros"
       And I should see "Proyectos sociales 2011"
 
   Scenario: Top 5 (Organizations and Projects)

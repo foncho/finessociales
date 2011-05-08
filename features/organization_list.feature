@@ -12,8 +12,9 @@ Feature: Organization List
            | Total | 3000   |
        When I go to the organizations page
        Then I should see "G-12345678"
+       Then show me the page
         And I should see the following organizations list
-           | CIF        | Entidad         | 2011       | 2010       | Total      |
+           | CIF        | Entidad         | 2012       | 2011       | Total      |
            | G-12345678 | Wadus Red Cross | 2.000,00 € | 1.000,00 € | 3.000,00 € |
 
   Scenario: Go to the organizations page
