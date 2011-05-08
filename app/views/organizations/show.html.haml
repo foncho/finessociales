@@ -34,14 +34,14 @@
           %span= number_to_currency(group.budget_for_organization_year(resource, year), :unit => '€', :format => '%n %u')
         .section-content
           %ul.programs
-            - Group.attended_by_organization(resource, year).each do |target|
+            - group.targets.attended_by_organization(resource, year).each do |target|
               %li
                 .title
                   %span= target.name
                 .budget
                   %span= number_to_currency(target.budget_for_organization_year(resource, year), :unit => '€', :format => '%n %u')
                 %ul.projects
-                  - target.projects.of_year(year).of_organization(resource).each do |project|
+                  - Project.of_organization(resource).target_is(target).of_year(year).each do |project|
                     %li{ :class => cycle('odd', 'even')}
                       .title
                         %span= project.title

@@ -1,5 +1,5 @@
 class Target < ActiveRecord::Base
-  
+
   belongs_to :group
   has_many :target_budgets, :dependent => :destroy
   has_many :projects
@@ -9,6 +9,11 @@ class Target < ActiveRecord::Base
   scope :of_year, lambda { |year|
     joins(:target_budgets).
     where("target_budgets.year_id == ?", year.to_param).uniq
+  }
+
+  scope :attended_by_organization, lambda { |organization, year|
+    joins(:projects).
+    where("projects.organization_id == ? and projects.year_id == ?", organization.id, year.id).uniq
   }
 
   def budget_for_organization_year(organization, year)
