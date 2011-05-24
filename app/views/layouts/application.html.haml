@@ -42,7 +42,8 @@
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" }
     %script{ :type => "text/javascript", :src => "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" }
     = javascript_include_tag("rails", "highcharts", "group_chart", "add_div" )
-    = content_for :footer    - if Rails.env.production?
+    = content_for :footer    
+    - if Rails.env.production?
       :javascript
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-23205565-1']);
