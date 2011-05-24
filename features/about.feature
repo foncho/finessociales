@@ -5,7 +5,7 @@ Feature: About page
 
   Scenario: About page
     When I am on the about page
-    Then I should see "ABOUT"
+    Then I should see "Sobre la aplicación"
 
   Scenario: Go to the about page
     Given a year exists

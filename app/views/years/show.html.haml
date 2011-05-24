@@ -45,11 +45,11 @@
   :javascript
     var data = [];
     var groups = "#{ a = ""
-                     Group.of_year(resource).each {|g| a << "#{g.name}-#{"%.2f" % g.percentage(resource)}-#{g.id};"}
+                     Group.of_year(resource).each {|g| a << "#{g.name}|#{"%.2f" % g.percentage(resource)}|#{group_path(g)};"}
                      a[0..(a.size-2)]
                     }".split(";");
     for(i = 0; i < groups.length; i++){
-      formated_data = groups[i].split("-");
+      formated_data = groups[i].split("|");
       formated_data[1] = parseFloat(formated_data[1]);
       data[i] = formated_data;
     }

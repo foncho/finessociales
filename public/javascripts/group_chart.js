@@ -25,7 +25,7 @@ groupChart = function(groups_data) {
                color: '#000000',
                connectorColor: '#000000',
                formatter: function() {
-                  return '<a href="/groups/'+this.point.config[2]+'">'+ this.point.name +'</a>';
+                  return '<a href="'+this.point.config[2]+'">'+ this.point.name +'</a>';
                }
             }
          }

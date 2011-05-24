@@ -9,7 +9,6 @@ Feature: Homepage
   Scenario: Homepage
     Given a year exists with year: 2009
      When I go to the homepage
-     Then show me the page
      Then I should see "100 millones de euros"
       And I should see "Proyectos sociales 2011"
 
