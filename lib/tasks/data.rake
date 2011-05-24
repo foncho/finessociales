@@ -16,8 +16,8 @@ namespace :data do
   task :import => :environment do
     require 'csv'
 
-    Dir['data/*.csv'].each do |file|
-      year_number = File.basename(file, '.csv')
+    Dir['data/*_data.csv'].each do |file|
+      year_number = File.basename(file, '.csv').split('_').first
       year = Year.find_by_year(year_number)
       if year
         # data set for this year already present, skip
